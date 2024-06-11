@@ -1,0 +1,13 @@
+
+  .clip-triangle {
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.clip-triangle-inverse {
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+}
+
+.clip-polygon {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    border: 1px black solid;
+}

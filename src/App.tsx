@@ -5,14 +5,13 @@ import ProjectsContainer from './components/ProjectsContainer'
 import SkillsContainer from './components/SkillsContainer'
 import ContactsContainer from './components/ContactsContainer'
 import Footer from './components/Footer'
+import TopNavBar from './components/TopNavBar'
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline h-[10vh]">
-        Hello world!
-      </h1>
+      <TopNavBar/>
       <HeroContainer/>
       <DescriptionContainer/>
       <SkillsContainer/>
