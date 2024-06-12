@@ -1,6 +1,6 @@
 export default function ContactsContainer(): React.ReactElement {
     return (
-        <section className="h-[100vh] w-full bg-black p-4 text-left text-white">
+        <section className="h-[100vh] w-full bg-black p-4 text-left text-white scroll-m-[10vh]" id='contacts'>
         <h2 className="text-3xl font-bold mb-4">Contacts</h2>
         <ul className="space-y-4">
             <li className="flex items-center space-x-2">

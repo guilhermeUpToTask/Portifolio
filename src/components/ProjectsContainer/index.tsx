@@ -5,7 +5,7 @@ export default function ProjectsContainer(): React.ReactElement {
 
     const displayProjects = projects.map((project, index) => {
         return (
-            <article key={index} className="flex flex-col lg:flex-row border p-6 rounded-lg shadow-lg mb-4">
+            <article key={index} className="flex flex-col lg:flex-row border p-6 rounded-lg shadow-lg mb-4 overflow-y-auto">
                 <div className="flex-shrink-0 lg:mr-6 mb-4 lg:mb-0 self-center">
                     <div className="bg-blue-500 text-white p-4 rounded-full">
                         <i className="fab fa-linkedin text-2xl"></i>
@@ -26,7 +26,7 @@ export default function ProjectsContainer(): React.ReactElement {
     })
 
     return (
-        <section className="h-[100vh] w-full bg-white p-6 text-left">
+        <section className="min-h-[100vh] w-full bg-white p-6 text-left scroll-m-[10vh]" id='projects'>
             {/*Articles with each one with the logo title and description of the project, as such the respective links in logo format */}
             <Title>Projects</Title>
 

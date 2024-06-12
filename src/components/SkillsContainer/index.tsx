@@ -35,7 +35,7 @@ export default function SkillsContainer(): React.ReactElement {
     })
 
     return (
-        <section className="h-[100vh] w-full bg-white p-6 text-left ">
+        <section className="min-h-[100vh] w-full bg-white p-6 text-left scroll-m-[10vh]" id='skills'>
             <Title>Skills</Title>
 
             <section className="flex flex-wrap justify-center items-center">
