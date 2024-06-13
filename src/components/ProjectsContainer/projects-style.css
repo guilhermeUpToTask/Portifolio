@@ -1,0 +1,6 @@
+.green-grid-bg {
+    background-color: white; /* Ensure a base color */
+    background-size: 3rem 3rem;
+    background-image: linear-gradient(0deg, transparent 24%, #20C77C 25%, #20C77C 26%, transparent 27%, transparent 74%, #20C77C 75%, #20C77C 76%, transparent 77%, transparent),
+                      linear-gradient(90deg, transparent 24%, #20C77C 25%, #20C77C 26%, transparent 27%, transparent 74%, #20C77C 75%, #20C77C 76%, transparent 77%, transparent);
+}
