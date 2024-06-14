@@ -1,8 +1,18 @@
 import { IconDefinition, faJs, faReact, faHtml5, faCss3, faNodeJs, faDocker, faPython, faJava, faBootstrap} from '@fortawesome/free-brands-svg-icons'; // Import specific icons
+import { faBolt } from '@fortawesome/free-solid-svg-icons';
+
+import fastApiUrl from '../../assets/icons/techs/fastapi-svg.svg'
+import firebaseUrl from '../../assets/icons/techs/firebase-svg.svg'
+import mongodbUrl from '../../assets/icons/techs/mongodb-svg.svg'
+import mysqlUrl from '../../assets/icons/techs/mysql-svg.svg'
+import nextJsUrl from '../../assets/icons/techs/next-dot-js-svg.svg'
+import postgresUrl from '../../assets/icons/techs/postgresql-svg.svg'
+import tailwindUrl from '../../assets/icons/techs/tailwind-svg.svg'
+import scraperUrl from '../../assets/icons/techs/scraper-svg.svg'
 
 type Skill = {
     name: string,
-    logo: IconDefinition,
+    logo: IconDefinition | string,
     link: string,
     description: string
 }
@@ -39,11 +49,6 @@ export const skills: Skill[] = [
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser."
     },{
-        name: "ExpressJS",
-        logo: faDocker,
-        link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
-    },{
         name: "Python",
         logo: faPython,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
@@ -55,27 +60,27 @@ export const skills: Skill[] = [
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "Supabase",
-        logo: faDocker,
+        logo: faBolt,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "Firebase",
-        logo: faDocker,
+        logo: firebaseUrl,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "MongoDB",
-        logo: faDocker,
+        logo: mongodbUrl,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "PostgresSQL",
-        logo: faDocker,
+        logo: postgresUrl,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "MySQL",
-        logo: faDocker,
+        logo: mysqlUrl,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
@@ -85,22 +90,22 @@ export const skills: Skill[] = [
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "TailWindCSS",
-        logo: faDocker,
+        logo: tailwindUrl,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "NextJS",
-        logo: faDocker,
+        logo: nextJsUrl,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "FastApi",
-        logo: faDocker,
+        logo: fastApiUrl,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{
         name: "Scrapy",
-        logo: faDocker,
+        logo: scraperUrl,
         link: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         description: "Docker is a software platform for developing, deploying, and managing applications. Docker is a tool for building, running, and sharing containers."
     },{

@@ -1,8 +1,8 @@
 export default function ContactsContainer(): React.ReactElement {
     return (
-        <section className="h-[100vh] w-full bg-black p-4 text-left text-white scroll-m-[10vh]" id='contacts'>
+        <section className="h-[100vh] w-full max-w-full bg-black p-4 text-left text-white scroll-m-[10vh]" id='contacts'>
         <h2 className="text-3xl font-bold mb-4">Contacts</h2>
-        <ul className="space-y-4">
+        <ul className="space-y-4 ml-3">
             <li className="flex items-center space-x-2">
                 <i className="fab fa-linkedin text-2xl"></i>
                 <a href="https://linkedin.com" className="hover:underline">LinkedIn</a>

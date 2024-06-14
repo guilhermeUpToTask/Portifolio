@@ -4,7 +4,6 @@ import DescriptionContainer from './components/DescriptionContainer'
 import ProjectsContainer from './components/ProjectsContainer'
 import SkillsContainer from './components/SkillsContainer'
 import ContactsContainer from './components/ContactsContainer'
-import Footer from './components/Footer'
 import TopNavBar from './components/TopNavBar'
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <SkillsContainer/>
       <ProjectsContainer/>
       <ContactsContainer/>
-      <Footer/>
     </>
   )
 }

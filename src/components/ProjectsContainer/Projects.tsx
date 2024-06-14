@@ -1,33 +1,37 @@
+import mercadoLivreIconUrl from '../../assets/icons/mercado_livre_icon.svg';
+import taskwiseIconUrl from '../../assets/icons/taskwise_icon.svg';
+import uptotaskBlogIconUrl from '../../assets/icons/uptotask_blog_icon.svg';
+
 type Project = {
     name: string;
     description: string;
     links: string[];
-    logo: string;
     mainColor:string;
     secondColor:string;
+    iconUrl: string;
 }
 
 export const projects: Project[] = [
     {
-        name: "Task Wise Finances - Sistema de Gerenciamento Financeiro",
-        description: "Desenvolvimento de uma aplicação web para gerenciamento de finanças pessoais. A aplicação oferece uma interface limpa e intuitiva para facilitar a navegação e compreensão dos usuários.",
+        name: "Task Wise Finances - Financial Management System",
+        description: "Development of a web application for personal finance management. The application provides a clean and intuitive interface with a calendar to facilitate navigation and user comprehension.",
         links: ["https://task-wise-finances-front.vercel.app/", "https://github.com/guilhermeUpToTask/TaskWiseFinancesFront"],
-        logo: "https://www.example.com/logo.png",
         mainColor:'#20c77c',
-        secondColor:"#efe5cf"
+        secondColor:"#efe5cf",
+        iconUrl: taskwiseIconUrl
     },{
-        name: "Mercado Livre Price Monitoring - Sistema de Monitoramento de Preços ",
-        description: "O projeto consiste em um sistema de monitoramento de preços do Mercado Livre. Utilizando a biblioteca Scrapy em Python, o sistema coleta dados de uma seleção específica de produtos do Mercado Livre diariamente. Esses dados são armazenados em um banco de dados SQLite e expostos através de uma API construída com FastAPI. A interface de usuário é desenvolvida em React, fornecendo uma visualização intuitiva e interativa dos dados coletados.",
+        name: "Mercado Livre Price Monitoring - Price Monitoring System",
+        description: "The project involves a price monitoring system for Mercado Livre. Using the Scrapy library in Python, it collects data daily from a specific selection of products on Mercado Livre. This data is stored in a MongoDB database and exposed through an API built with FastAPI. The user interface is developed in React, offering an intuitive and interactive visualization of the collected data.",
         links: ["https://www.example.com", "https://www.example.com"],
-        logo: "https://www.example.com/logo.png",
         mainColor:"#FFE501",
-        secondColor:"#2D3277"
+        secondColor:"#2D3277",
+        iconUrl: mercadoLivreIconUrl
     },{
-        name: "Up To Task Blog - Blog Pessoal",
-        description: "O Blog Pessoal é uma plataforma que utilizo para armazenar e compartilhar informações relacionadas ao desenvolvimento web e outras tecnologias que aprendo ao longo do tempo. Desenvolvido utilizando React para a interface de usuário, o blog oferece uma experiência intuitiva e interativa para os usuários. Os dados são armazenados e gerenciados no Firebase, proporcionando uma infraestrutura escalável e confiável. O estilo do blog é construído com HTML e CSS, garantindo uma apresentação visualmente atraente e responsiva.",
+        name: "Up To Task Blog - Personal Blog",
+        description: "The Personal Blog is where I store and share information on web development and other technologies I learn. It uses React for a user-friendly interface, and data is managed in Firebase for scalability and reliability. The blog's visual appeal and responsiveness are ensured by HTML and CSS styling.",
         links: ["https://up-to-task-blog.vercel.app", "https://github.com/guilhermeUpToTask/UpToTaskBlog"],
-        logo: "https://www.example.com/logo.png",
         mainColor:"#000000",
-        secondColor:"#07040D"
+        secondColor:"#07040D",
+        iconUrl: uptotaskBlogIconUrl
     },
 ]

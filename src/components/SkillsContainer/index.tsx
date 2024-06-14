@@ -6,6 +6,10 @@ import { skills } from "./Skills";
 export default function SkillsContainer(): React.ReactElement {
 
     const displaySkills = skills.map((skill, index) => {
+        const logo = typeof skill.logo === 'string' ?
+            <img src={skill.logo} className="text-4xl m-auto mb-4 " />
+            :
+            < FontAwesomeIcon icon={skill.logo} className="text-4xl mb-4 " />
         return (
             <article
                 className={`
@@ -15,6 +19,7 @@ export default function SkillsContainer(): React.ReactElement {
                     lg:w-1/6 
                     p-4 
                     m-2 
+                    min-h-[120px]
                     bg-gradient-to-br 
                     from-gray-900 
                     to-gray-700 
@@ -28,7 +33,7 @@ export default function SkillsContainer(): React.ReactElement {
                     `}
                 key={index}
             >
-               <FontAwesomeIcon icon={skill.logo} className="text-4xl mb-4" />
+                {logo}
                 <h2 className="text-xl font-bold mb-2">{skill.name}</h2>
             </article>
         )
