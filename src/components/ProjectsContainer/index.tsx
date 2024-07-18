@@ -8,6 +8,8 @@ import './projects-style.css'; // Ensure this CSS file contains necessary styles
 
 
 export default function ProjectsContainer(): React.ReactElement {
+    /* 
+    ## Grid Bacground Removed
     const getDynamicBackground = (color: string) => {
         return {
             backgroundColor: 'white',
@@ -17,6 +19,7 @@ export default function ProjectsContainer(): React.ReactElement {
             radial-gradient(circle, ${color} 1px, transparent 1px)`
         }
     }
+        */
 
     const displayProjects = projects.map((project, index) => {
         return (
@@ -50,7 +53,7 @@ export default function ProjectsContainer(): React.ReactElement {
     });
 
     return (
-        <section className="min-h-[100vh] w-full p-6 text-left scroll-m-[10vh]" style={getDynamicBackground('rgb(229 231 235)')} id='projects'>
+        <section className="min-h-[100vh] w-full p-6 text-left scroll-m-[10vh]" style={{backgroundColor:'white'}} id='projects'>
             <Title>Projects</Title>
             <section className="flex flex-col">
                 {displayProjects}

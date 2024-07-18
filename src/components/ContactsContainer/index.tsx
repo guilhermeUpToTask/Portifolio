@@ -5,19 +5,15 @@ export default function ContactsContainer(): React.ReactElement {
         <ul className="space-y-4 ml-3">
             <li className="flex items-center space-x-2">
                 <i className="fab fa-linkedin text-2xl"></i>
-                <a href="https://linkedin.com" className="hover:underline">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/guilherme-matos-a7aaa9279/" className="hover:underline">LinkedIn</a>
             </li>
             <li className="flex items-center space-x-2">
                 <i className="fab fa-github text-2xl"></i>
-                <a href="https://github.com" className="hover:underline">GitHub</a>
+                <a href="https://github.com/guilhermeUpToTask" className="hover:underline">GitHub</a>
             </li>
             <li className="flex items-center space-x-2">
                 <i className="fas fa-envelope text-2xl"></i>
-                <a href="mailto:example@example.com" className="hover:underline">Email</a>
-            </li>
-            <li className="flex items-center space-x-2">
-                <i className="fab fa-facebook text-2xl"></i>
-                <a href="https://facebook.com" className="hover:underline">Facebook</a>
+                <a href="mailto:guilhermeaugustomatosferreira@gmail.com" className="hover:underline">Email</a>
             </li>
             <li className="flex items-center space-x-2">
                 <i className="fab fa-whatsapp text-2xl"></i>

@@ -33,8 +33,10 @@ export default function SkillsContainer(): React.ReactElement {
                     `}
                 key={index}
             >
-                {logo}
-                <h2 className="text-xl font-bold mb-2">{skill.name}</h2>
+                <a href={skill.link} target="_blank" className="w-full h-full block">
+                    {logo}
+                    <h2 className="text-xl font-bold mb-2">{skill.name}</h2>
+                </a>
             </article>
         )
     })
