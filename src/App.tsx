@@ -28,26 +28,30 @@ function App() {
 
   const skills = [
     {
-      category: "Frontend",
+      category: "Frontend Development",
       items: [
-        { name: "React", level: 90, icon: <Code className="w-6 h-6" /> },
-        { name: "TypeScript", level: 85, icon: <Code className="w-6 h-6" /> },
-        { name: "Tailwind CSS", level: 88, icon: <Code className="w-6 h-6" /> }
+        { name: "React", level: 90, icon: <Code className="w-6 h-6" />, color: "text-blue-400" },
+        { name: "TypeScript", level: 85, icon: <Code className="w-6 h-6" />, color: "text-blue-600" },
+        { name: "Tailwind CSS", level: 88, icon: <Code className="w-6 h-6" />, color: "text-cyan-400" },
+        { name: "Next.js", level: 80, icon: <Code className="w-6 h-6" />, color: "text-black dark:text-white" }
       ]
     },
     {
-      category: "Backend",
+      category: "Backend Development",
       items: [
-        { name: "Python", level: 92, icon: <Code className="w-6 h-6" /> },
-        { name: "FastAPI", level: 88, icon: <Server className="w-6 h-6" /> },
-        { name: "PostgreSQL", level: 85, icon: <Database className="w-6 h-6" /> }
+        { name: "Node.js", level: 85, icon: <Server className="w-6 h-6" />, color: "text-green-500" },
+        { name: "Python", level: 90, icon: <Code className="w-6 h-6" />, color: "text-yellow-500" },
+        { name: "PostgreSQL", level: 80, icon: <Database className="w-6 h-6" />, color: "text-blue-500" },
+        { name: "REST APIs", level: 88, icon: <Server className="w-6 h-6" />, color: "text-purple-500" }
       ]
     },
     {
-      category: "DevOps",
+      category: "DevOps & Tools",
       items: [
-        { name: "Docker", level: 82, icon: <Container className="w-6 h-6" /> },
-        { name: "Nginx", level: 80, icon: <Server className="w-6 h-6" /> }
+        { name: "Docker", level: 82, icon: <Container className="w-6 h-6" />, color: "text-blue-400" },
+        { name: "Git", level: 90, icon: <Code className="w-6 h-6" />, color: "text-orange-500" },
+        { name: "AWS", level: 75, icon: <Server className="w-6 h-6" />, color: "text-yellow-500" },
+        { name: "CI/CD", level: 80, icon: <LineChart className="w-6 h-6" />, color: "text-green-500" }
       ]
     }
   ];
@@ -211,7 +215,7 @@ function App() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Technical Skills</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">Technical Skills</h2>
             <p className="text-gray-400">Technologies I work with</p>
           </motion.div>
 
@@ -223,9 +227,9 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
               >
-                <Card className="bg-card/30 backdrop-blur-sm border-primary/10">
+                <Card className="bg-card/30 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-4">{category.category}</h3>
+                    <h3 className="text-xl font-semibold mb-6 text-primary">{category.category}</h3>
                     <div className="space-y-6">
                       {category.items.map((skill, skillIndex) => (
                         <motion.div
@@ -233,17 +237,23 @@ function App() {
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.4, delay: skillIndex * 0.1 }}
+                          className="group"
                         >
-                          <div className="flex items-center gap-2 mb-2">
-                            {skill.icon}
-                            <span className="font-medium">{skill.name}</span>
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-3">
+                              <div className={`${skill.color} group-hover:scale-110 transition-transform duration-300`}>
+                                {skill.icon}
+                              </div>
+                              <span className="font-medium text-foreground">{skill.name}</span>
+                            </div>
+                            <span className="text-sm text-muted-foreground">{skill.level}%</span>
                           </div>
                           <div className="h-2 bg-primary/10 rounded-full overflow-hidden">
                             <motion.div
-                              className="h-full bg-primary/30"
+                              className="h-full bg-gradient-to-r from-primary to-primary/50"
                               initial={{ width: 0 }}
                               whileInView={{ width: `${skill.level}%` }}
-                              transition={{ duration: 1, ease: "easeOut" }}
+                              transition={{ duration: 1, ease: "easeOut", delay: skillIndex * 0.1 }}
                             />
                           </div>
                         </motion.div>
