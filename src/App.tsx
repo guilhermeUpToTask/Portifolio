@@ -10,6 +10,7 @@ import { Navigation } from './components/Navigation';
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
 import { Badge } from "@/components/ui/badge";
 
+
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
