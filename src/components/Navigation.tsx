@@ -1,13 +1,16 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { Home, Code, Rocket, Mail } from 'lucide-react';
+import { Home, Code, Rocket, Clock, Briefcase, BookOpen, Satellite } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const sections = [
   { id: 'hero', label: 'Home', icon: <Home className="w-4 h-4" /> },
+  { id: 'mission', label: 'Mission', icon: <Clock className="w-4 h-4" /> },
+  { id: 'station', label: 'Space Station', icon: <Briefcase className="w-4 h-4" /> },
   { id: 'skills', label: 'Skills', icon: <Code className="w-4 h-4" /> },
   { id: 'projects', label: 'Projects', icon: <Rocket className="w-4 h-4" /> },
-  { id: 'contact', label: 'Contact', icon: <Mail className="w-4 h-4" /> }
+  { id: 'matter', label: 'Dark Matter', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'contact', label: 'Mission Control', icon: <Satellite className="w-4 h-4" /> }
 ];
 
 export function Navigation() {

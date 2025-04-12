@@ -1,12 +1,14 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Github, ExternalLink, Mail, Twitter, Code, Boxes, LineChart, Server, Rocket, Satellite, Cpu, Circle, CheckCircle2, Clock } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Github, ExternalLink, Mail, Code, Boxes, LineChart, Server, Rocket, Satellite, Cpu, Circle, CheckCircle2, Clock, Briefcase, Linkedin, Twitter, Globe } from 'lucide-react';
 import { ParticleBackground } from './components/ParticleBackground';
 import { FaReact, FaNodeJs, FaPython, FaDocker, FaAws } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit } from 'react-icons/si';
 import { Navigation } from './components/Navigation';
+import { Timeline, TimelineItem } from "@/components/ui/timeline";
+import { Badge } from "@/components/ui/badge";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -97,6 +99,7 @@ function App() {
   return (
     <div ref={containerRef} className="relative min-h-screen bg-background">
       <Navigation />
+      <ParticleBackground />
       
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -217,6 +220,91 @@ function App() {
             />
           </motion.div>
         </motion.div>
+      </section>
+
+      {/* Mission Statement Section */}
+      <section id="mission" className="relative py-32 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">Mission Timeline</h2>
+            <p className="text-muted-foreground">My journey through the cosmos of technology</p>
+          </motion.div>
+          
+          <Timeline className="relative">
+            <TimelineItem
+              date="2023 - Present"
+              title="Intergalactic Explorer"
+              description="Leading development teams through uncharted territories of web technology"
+              icon={<Rocket className="w-4 h-4" />}
+            />
+            <TimelineItem
+              date="2021 - 2023"
+              title="Space Station Engineer"
+              description="Building robust systems and infrastructure for enterprise applications"
+              icon={<Briefcase className="w-4 h-4" />}
+            />
+            <TimelineItem
+              date="2019 - 2021"
+              title="Cosmic Navigator"
+              description="Charting courses through the vast universe of full-stack development"
+              icon={<Code className="w-4 h-4" />}
+            />
+          </Timeline>
+        </div>
+      </section>
+
+      {/* Space Station (Work Experience) Section */}
+      <section id="station" className="relative py-32 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">Space Station</h2>
+            <p className="text-muted-foreground">My professional journey through the tech universe</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
+              <CardHeader>
+                <CardTitle>Senior Space Engineer</CardTitle>
+                <CardDescription>Galactic Tech Corp • 2023 - Present</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="mb-4">Leading development of next-generation space exploration software</p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">React</Badge>
+                  <Badge variant="secondary">TypeScript</Badge>
+                  <Badge variant="secondary">Node.js</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
+              <CardHeader>
+                <CardTitle>Space Systems Architect</CardTitle>
+                <CardDescription>Orbit Solutions • 2021 - 2023</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="mb-4">Designed and implemented scalable space mission control systems</p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Python</Badge>
+                  <Badge variant="secondary">AWS</Badge>
+                  <Badge variant="secondary">Docker</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </section>
 
       {/* Skills Section */}
@@ -489,31 +577,238 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="relative py-32 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-2xl mx-auto text-center relative z-10"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Let's Connect</h2>
-          <p className="text-gray-400 mb-8">Get in touch for opportunities or just to say hi</p>
-          <div className="flex gap-4 justify-center">
-            <Button variant="outline" className="bg-background/50 backdrop-blur-sm hover:bg-primary/10">
-              <Mail className="w-4 h-4 mr-2" />
-              Email
-            </Button>
-            <Button variant="outline" className="bg-background/50 backdrop-blur-sm hover:bg-primary/10">
-              <Twitter className="w-4 h-4 mr-2" />
-              Twitter
-            </Button>
-            <Button variant="outline" className="bg-background/50 backdrop-blur-sm hover:bg-primary/10">
-              <Github className="w-4 h-4 mr-2" />
-              GitHub
-            </Button>
+      {/* Dark Matter (Blog) Section */}
+      <section id="matter" className="relative py-32 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">Dark Matter</h2>
+            <p className="text-muted-foreground">Exploring the unknown territories of technology</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
+              <CardHeader>
+                <CardTitle>The Future of Web Development</CardTitle>
+                <CardDescription>March 15, 2024</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>Exploring emerging technologies and their impact on the web development landscape...</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
+              <CardHeader>
+                <CardTitle>Space Architecture Patterns</CardTitle>
+                <CardDescription>February 28, 2024</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>Designing scalable systems for the next generation of space applications...</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
+              <CardHeader>
+                <CardTitle>Quantum Computing Basics</CardTitle>
+                <CardDescription>January 10, 2024</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>A beginner's guide to understanding quantum computing principles...</p>
+              </CardContent>
+            </Card>
           </div>
-        </motion.div>
+        </div>
+      </section>
+
+      {/* Mission Control (Contact) Section */}
+      <section id="contact" className="relative py-32 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">Mission Control</h2>
+            <p className="text-muted-foreground">Establish communication for your next space mission</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
+                <CardHeader>
+                  <CardTitle>Transmission Details</CardTitle>
+                  <CardDescription>Connect with mission control through various channels</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6">
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-colors cursor-pointer"
+                      onClick={() => window.open('mailto:contact@spaceexplorer.dev', '_blank')}
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Mail className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Email</p>
+                        <p className="text-sm text-muted-foreground">contact@spaceexplorer.dev</p>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-colors cursor-pointer"
+                      onClick={() => window.open('https://github.com/spaceexplorer', '_blank')}
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Github className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">GitHub</p>
+                        <p className="text-sm text-muted-foreground">github.com/spaceexplorer</p>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-colors cursor-pointer"
+                      onClick={() => window.open('https://linkedin.com/in/spaceexplorer', '_blank')}
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Linkedin className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">LinkedIn</p>
+                        <p className="text-sm text-muted-foreground">linkedin.com/in/spaceexplorer</p>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.7 }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-colors cursor-pointer"
+                      onClick={() => window.open('https://twitter.com/spaceexplorer', '_blank')}
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Twitter className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Twitter</p>
+                        <p className="text-sm text-muted-foreground">@spaceexplorer</p>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-colors cursor-pointer"
+                      onClick={() => window.open('https://spaceexplorer.dev', '_blank')}
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Globe className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Website</p>
+                        <p className="text-sm text-muted-foreground">spaceexplorer.dev</p>
+                      </div>
+                    </motion.div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
+                <CardHeader>
+                  <CardTitle>Send Transmission</CardTitle>
+                  <CardDescription>Direct line to mission control</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <form className="space-y-4">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                      viewport={{ once: true }}
+                    >
+                      <label className="text-sm font-medium">Name</label>
+                      <input 
+                        type="text" 
+                        className="w-full mt-1 p-2 rounded-md bg-background/20 border border-primary/20 focus:border-primary/40 focus:ring-1 focus:ring-primary/20 transition-colors" 
+                        placeholder="Enter your name"
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      viewport={{ once: true }}
+                    >
+                      <label className="text-sm font-medium">Email</label>
+                      <input 
+                        type="email" 
+                        className="w-full mt-1 p-2 rounded-md bg-background/20 border border-primary/20 focus:border-primary/40 focus:ring-1 focus:ring-primary/20 transition-colors" 
+                        placeholder="Enter your email"
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      viewport={{ once: true }}
+                    >
+                      <label className="text-sm font-medium">Message</label>
+                      <textarea 
+                        className="w-full mt-1 p-2 rounded-md bg-background/20 border border-primary/20 focus:border-primary/40 focus:ring-1 focus:ring-primary/20 transition-colors h-32" 
+                        placeholder="Type your message here..."
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.7 }}
+                      viewport={{ once: true }}
+                    >
+                      <Button className="w-full bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20">
+                        Launch Transmission
+                      </Button>
+                    </motion.div>
+                  </form>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
