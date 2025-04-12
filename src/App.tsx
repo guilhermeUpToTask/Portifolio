@@ -81,33 +81,34 @@ function App() {
 
   return (
     <div ref={containerRef} className="relative min-h-screen bg-background">
-      {/* Parallax Background */}
-      <div className="fixed inset-0 pointer-events-none">
-        <motion.div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&h=1080')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            y: useTransform(spring, [0, 1], [0, -100])
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/80 to-background" />
-      </div>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
+        {/* Background layers */}
+        <div className="fixed inset-0 pointer-events-none z-0">
+          <motion.div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&h=1080')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              y: useTransform(spring, [0, 1], [0, -100])
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/80 to-background" />
+        </div>
+
+        {/* Particles */}
+        <div className="absolute inset-0 z-0">
           <ParticleBackground />
         </div>
         
         <motion.div
           style={{ y: y1, opacity }}
-          className="absolute top-1/4 -left-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl" 
+          className="absolute top-1/4 -left-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl z-0" 
         />
         <motion.div
           style={{ y: y2, opacity }}
-          className="absolute bottom-1/4 -right-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 -right-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl z-0"
         />
         
         <motion.div
