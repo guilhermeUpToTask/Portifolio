@@ -6,6 +6,7 @@ import { Github, ExternalLink, Mail, Twitter, Code, Boxes, LineChart, Server, Ro
 import { ParticleBackground } from './components/ParticleBackground';
 import { FaReact, FaNodeJs, FaPython, FaDocker, FaAws } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit } from 'react-icons/si';
+import { Navigation } from './components/Navigation';
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -95,8 +96,10 @@ function App() {
 
   return (
     <div ref={containerRef} className="relative min-h-screen bg-background">
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background layers */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <motion.div
@@ -217,7 +220,7 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section className="relative py-32 px-4">
+      <section id="skills" className="relative py-32 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -320,7 +323,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="relative py-32 px-4">
+      <section id="projects" className="relative py-32 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -350,10 +353,18 @@ function App() {
                   scale: 1,
                   rotateX: 0
                 }}
+                whileHover={{
+                  y: -10,
+                  scale: 1.02,
+                  transition: {
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }
+                }}
                 transition={{ 
                   duration: 0.8,
                   delay: index * 0.2,
-                  ease: [0.16, 1, 0.3, 1], // Custom easing for a more natural feel
+                  ease: [0.16, 1, 0.3, 1],
                   rotateX: {
                     duration: 0.6,
                     delay: index * 0.2
@@ -479,7 +490,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section className="relative py-32 px-4">
+      <section id="contact" className="relative py-32 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
