@@ -1,12 +1,13 @@
-import { useEffect, useState, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Github, ExternalLink, Mail, Twitter, Code, Boxes, LineChart, Database, Server, Container } from 'lucide-react';
+import { Github, ExternalLink, Mail, Twitter, Code, Boxes, LineChart, Server, Rocket, Satellite, Cpu } from 'lucide-react';
 import { ParticleBackground } from './components/ParticleBackground';
+import { FaReact, FaNodeJs, FaPython, FaDocker, FaAws } from 'react-icons/fa';
+import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit } from 'react-icons/si';
 
 function App() {
-  const [scrollY, setScrollY] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -20,38 +21,38 @@ function App() {
   const springConfig = { stiffness: 100, damping: 30, bounce: 0 };
   const spring = useSpring(scrollYProgress, springConfig);
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const skills = [
     {
       category: "Frontend Development",
+      icon: <Rocket className="w-8 h-8 text-blue-400" />,
+      description: "Building modern, responsive user interfaces with cutting-edge technologies",
       items: [
-        { name: "React", level: 90, icon: <Code className="w-6 h-6" />, color: "text-blue-400" },
-        { name: "TypeScript", level: 85, icon: <Code className="w-6 h-6" />, color: "text-blue-600" },
-        { name: "Tailwind CSS", level: 88, icon: <Code className="w-6 h-6" />, color: "text-cyan-400" },
-        { name: "Next.js", level: 80, icon: <Code className="w-6 h-6" />, color: "text-black dark:text-white" }
+        { name: "React", level: 90, icon: <FaReact className="w-6 h-6" />, color: "text-blue-400", description: "Advanced component architecture and state management" },
+        { name: "TypeScript", level: 85, icon: <SiTypescript className="w-6 h-6" />, color: "text-blue-600", description: "Type-safe development and advanced type features" },
+        { name: "Tailwind CSS", level: 88, icon: <Code className="w-6 h-6" />, color: "text-cyan-400", description: "Utility-first CSS framework for rapid UI development" },
+        { name: "Next.js", level: 80, icon: <SiNextdotjs className="w-6 h-6" />, color: "text-black dark:text-white", description: "Server-side rendering and static site generation" }
       ]
     },
     {
       category: "Backend Development",
+      icon: <Satellite className="w-8 h-8 text-green-400" />,
+      description: "Designing scalable and efficient server-side applications",
       items: [
-        { name: "Node.js", level: 85, icon: <Server className="w-6 h-6" />, color: "text-green-500" },
-        { name: "Python", level: 90, icon: <Code className="w-6 h-6" />, color: "text-yellow-500" },
-        { name: "PostgreSQL", level: 80, icon: <Database className="w-6 h-6" />, color: "text-blue-500" },
-        { name: "REST APIs", level: 88, icon: <Server className="w-6 h-6" />, color: "text-purple-500" }
+        { name: "Node.js", level: 85, icon: <FaNodeJs className="w-6 h-6" />, color: "text-green-500", description: "Event-driven architecture and non-blocking I/O" },
+        { name: "Python", level: 90, icon: <FaPython className="w-6 h-6" />, color: "text-yellow-500", description: "Clean code and efficient algorithms" },
+        { name: "PostgreSQL", level: 80, icon: <SiPostgresql className="w-6 h-6" />, color: "text-blue-500", description: "Relational database design and optimization" },
+        { name: "REST APIs", level: 88, icon: <Server className="w-6 h-6" />, color: "text-purple-500", description: "RESTful architecture and API design" }
       ]
     },
     {
       category: "DevOps & Tools",
+      icon: <Cpu className="w-8 h-8 text-orange-400" />,
+      description: "Streamlining development workflows and deployment processes",
       items: [
-        { name: "Docker", level: 82, icon: <Container className="w-6 h-6" />, color: "text-blue-400" },
-        { name: "Git", level: 90, icon: <Code className="w-6 h-6" />, color: "text-orange-500" },
-        { name: "AWS", level: 75, icon: <Server className="w-6 h-6" />, color: "text-yellow-500" },
-        { name: "CI/CD", level: 80, icon: <LineChart className="w-6 h-6" />, color: "text-green-500" }
+        { name: "Docker", level: 82, icon: <FaDocker className="w-6 h-6" />, color: "text-blue-400", description: "Containerization and microservices architecture" },
+        { name: "Git", level: 90, icon: <SiGit className="w-6 h-6" />, color: "text-orange-500", description: "Version control and collaborative development" },
+        { name: "AWS", level: 75, icon: <FaAws className="w-6 h-6" />, color: "text-yellow-500", description: "Cloud infrastructure and services" },
+        { name: "CI/CD", level: 80, icon: <LineChart className="w-6 h-6" />, color: "text-green-500", description: "Continuous integration and deployment pipelines" }
       ]
     }
   ];
@@ -219,17 +220,52 @@ function App() {
             <p className="text-gray-400">Technologies I work with</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            {/* Constellation Lines */}
+            <div className="absolute inset-0 pointer-events-none">
+              <svg className="w-full h-full">
+                {skills.map((category, i) => (
+                  skills.slice(i + 1).map((otherCategory, j) => (
+                    <motion.line
+                      key={`${i}-${j}`}
+                      x1="50%"
+                      y1="50%"
+                      x2="50%"
+                      y2="50%"
+                      stroke="rgba(var(--primary), 0.1)"
+                      strokeWidth="1"
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      transition={{ duration: 1, delay: 0.5 }}
+                    />
+                  ))
+                ))}
+              </svg>
+            </div>
+
             {skills.map((category, categoryIndex) => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
+                whileHover={{ scale: 1.02 }}
+                className="perspective-1000"
               >
-                <Card className="bg-card/30 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <Card className="bg-card/30 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group transform-gpu">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-6 text-primary">{category.category}</h3>
+                    <div className="flex items-center gap-4 mb-6">
+                      <motion.div
+                        animate={{ rotate: [0, 10, -10, 0] }}
+                        transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+                      >
+                        {category.icon}
+                      </motion.div>
+                      <h3 className="text-xl font-semibold text-primary">{category.category}</h3>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {category.description}
+                    </p>
                     <div className="space-y-6">
                       {category.items.map((skill, skillIndex) => (
                         <motion.div
@@ -237,13 +273,17 @@ function App() {
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.4, delay: skillIndex * 0.1 }}
-                          className="group"
+                          className="group/skill"
                         >
                           <div className="flex items-center justify-between mb-2">
                             <div className="flex items-center gap-3">
-                              <div className={`${skill.color} group-hover:scale-110 transition-transform duration-300`}>
+                              <motion.div
+                                className={`${skill.color} group-hover/skill:scale-110 transition-transform duration-300`}
+                                whileHover={{ rotate: 360 }}
+                                transition={{ duration: 0.5 }}
+                              >
                                 {skill.icon}
-                              </div>
+                              </motion.div>
                               <span className="font-medium text-foreground">{skill.name}</span>
                             </div>
                             <span className="text-sm text-muted-foreground">{skill.level}%</span>
@@ -256,6 +296,9 @@ function App() {
                               transition={{ duration: 1, ease: "easeOut", delay: skillIndex * 0.1 }}
                             />
                           </div>
+                          <p className="text-xs text-muted-foreground mt-2 opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300">
+                            {skill.description}
+                          </p>
                         </motion.div>
                       ))}
                     </div>
