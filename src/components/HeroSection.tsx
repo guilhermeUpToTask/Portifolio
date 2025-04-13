@@ -6,7 +6,7 @@ interface HeroSectionProps {
   y1: MotionValue<number>;
   y2: MotionValue<number>;
   opacity: MotionValue<number>;
-  spring?: MotionValue<number>;
+  spring: MotionValue<number>;
 }
 
 const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
@@ -30,7 +30,7 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
               backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&h=1080')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              y: useTransform(springValue, [0, 1], [0, -100])
+              y: useTransform(spring, [0, 1], [0, -100])
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/80 to-background" />
