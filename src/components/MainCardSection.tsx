@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Sparkles } from 'lucide-react';
+import { ChatBot } from './ChatBot';
 
 const MainCardSection = () => {
   const controls = useAnimation();
@@ -98,21 +99,6 @@ const MainCardSection = () => {
               animate={controls}
               className="flex flex-wrap gap-3"
             >
-              <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-1">
-                <Sparkles className="w-4 h-4 mr-2" />
-                Featured
-              </Badge>
-              <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-1">
-                <Sparkles className="w-4 h-4 mr-2" />
-                New
-              </Badge>
-            </motion.div>
-            <motion.div
-              variants={contentVariants}
-              initial="hidden"
-              animate={controls}
-              className="space-y-2"
-            >
               <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
                 Welcome to My Portfolio
               </CardTitle>
@@ -122,60 +108,7 @@ const MainCardSection = () => {
             </motion.div>
           </CardHeader>
           <CardContent>
-            <motion.div 
-              variants={contentVariants}
-              initial="hidden"
-              animate={controls}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-primary flex items-center gap-2">
-                  <motion.span
-                    variants={iconVariants}
-                    initial="hidden"
-                    animate={controls}
-                  >
-                    <Sparkles className="w-6 h-6" />
-                  </motion.span>
-                  About Me
-                </h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  I'm a passionate developer with expertise in modern web technologies.
-                  My journey in tech is driven by curiosity and a desire to create
-                  meaningful digital experiences.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-primary flex items-center gap-2">
-                  <motion.span
-                    variants={iconVariants}
-                    initial="hidden"
-                    animate={controls}
-                  >
-                    <Sparkles className="w-6 h-6" />
-                  </motion.span>
-                  What I Do
-                </h3>
-                <ul className="space-y-3 text-muted-foreground text-lg">
-                  <li className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    Full-stack web development
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    UI/UX design
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    Cloud architecture
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    Technical consulting
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
+            <ChatBot/>
           </CardContent>
         </Card>
       </motion.div>
