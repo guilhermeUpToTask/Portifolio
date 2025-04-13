@@ -1,4 +1,4 @@
-import { motion, MotionValue, useScroll } from 'framer-motion';
+import { motion, MotionValue, useScroll, useTransform, cubicBezier } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ParticleBackground } from './ParticleBackground';
 
@@ -30,7 +30,9 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
             backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&h=1080')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            y: springValue
+            y: useTransform(springValue, [0, 1], [0, -200], {
+              ease: cubicBezier(0.16, 1, 0.3, 1)
+            })
           }}
           aria-hidden="true"
         />
