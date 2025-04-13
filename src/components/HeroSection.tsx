@@ -22,22 +22,19 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
-      {/* Background layers */}
-      <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
-        <motion.div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&h=1080')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            y: useTransform(springValue, [0, 1], [0, -200], {
-              ease: cubicBezier(0.16, 1, 0.3, 1)
-            })
-          }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/80 to-background" aria-hidden="true" />
-      </div>
+        {/* Background layers */}
+        <div className="fixed inset-0 pointer-events-none z-0">
+          <motion.div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&h=1080')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              y: useTransform(springValue, [0, 1], [0, -100])
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/80 to-background" />
+        </div>
 
       {/* Particles */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
