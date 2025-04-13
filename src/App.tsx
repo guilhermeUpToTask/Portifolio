@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { useScroll, useTransform } from 'framer-motion';
+import { useScroll, useSpring, useTransform } from 'framer-motion';
 import SectionLoading from './components/SectionLoading';
 import ErrorBoundary from './components/ErrorBoundary';
 import { Navigation } from './components/Navigation';
@@ -16,9 +16,13 @@ const FooterComponent = lazy(() => import('./components/Footer'));
 
 function App() {
   const { scrollYProgress } = useScroll();
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.5, 0]);
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -300]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+
+  const springConfig = { stiffness: 100, damping: 30, bounce: 0 };
+  const spring = useSpring(scrollYProgress, springConfig);
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -29,7 +33,7 @@ function App() {
       <main role="main">
         <ErrorBoundary>
           <Suspense fallback={<SectionLoading />}>
-            <HeroSection y1={y1} y2={y2} opacity={opacity} spring={scrollYProgress} />
+            <HeroSection y1={y1} y2={y2} opacity={opacity} spring={spring} />
           </Suspense>
         </ErrorBoundary>
 
