@@ -6,6 +6,7 @@ import { Navigation } from './components/Navigation';
 
 // Lazy load sections
 const HeroSection = lazy(() => import('./components/HeroSection'));
+const MainCardSection = lazy(() => import('./components/MainCardSection'));
 const MissionSection = lazy(() => import('./components/MissionSection'));
 const SpaceStationSection = lazy(() => import('./components/SpaceStationSection'));
 const SkillsSection = lazy(() => import('./components/SkillsSection'));
@@ -34,6 +35,12 @@ function App() {
         <ErrorBoundary>
           <Suspense fallback={<SectionLoading />}>
             <HeroSection y1={y1} y2={y2} opacity={opacity} spring={spring} />
+          </Suspense>
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <MainCardSection />
           </Suspense>
         </ErrorBoundary>
 
