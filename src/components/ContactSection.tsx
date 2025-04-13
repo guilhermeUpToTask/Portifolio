@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Mail, Github, Linkedin, Twitter, Globe } from 'lucide-react';
 
-export function ContactSection() {
+const ContactSection = () => {
   return (
     <section id="contact" className="relative py-32 px-4">
       <div className="max-w-6xl mx-auto">
@@ -190,4 +190,6 @@ export function ContactSection() {
       </div>
     </section>
   );
-} 
+};
+
+export default ContactSection; 

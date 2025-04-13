@@ -1,15 +1,24 @@
-import { useRef } from 'react';
+import { useRef, lazy, Suspense } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
 import { Navigation } from './components/Navigation';
 import { ParticleBackground } from './components/ParticleBackground';
-import { HeroSection } from './components/HeroSection';
-import { MissionSection } from './components/MissionSection';
-import { SpaceStationSection } from './components/SpaceStationSection';
-import { SkillsSection } from './components/SkillsSection';
-import { ProjectsSection } from './components/ProjectsSection';
-import { DarkMatterSection } from './components/DarkMatterSection';
-import { ContactSection } from './components/ContactSection';
-import { Footer } from './components/Footer';
+import Footer from './components/Footer';
+
+// Lazy load sections
+const HeroSection = lazy(() => import('./components/HeroSection'));
+const MissionSection = lazy(() => import('./components/MissionSection'));
+const SpaceStationSection = lazy(() => import('./components/SpaceStationSection'));
+const SkillsSection = lazy(() => import('./components/SkillsSection'));
+const ProjectsSection = lazy(() => import('./components/ProjectsSection'));
+const DarkMatterSection = lazy(() => import('./components/DarkMatterSection'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+
+// Loading component for Suspense fallback
+const SectionLoading = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+  </div>
+);
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -27,13 +36,34 @@ function App() {
       <Navigation />
       <ParticleBackground />
       
-      <HeroSection y1={y1} y2={y2} opacity={opacity} />
-      <MissionSection />
-      <SpaceStationSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <DarkMatterSection />
-      <ContactSection />
+      <Suspense fallback={<SectionLoading />}>
+        <HeroSection y1={y1} y2={y2} opacity={opacity} />
+      </Suspense>
+      
+      <Suspense fallback={<SectionLoading />}>
+        <MissionSection />
+      </Suspense>
+      
+      <Suspense fallback={<SectionLoading />}>
+        <SpaceStationSection />
+      </Suspense>
+      
+      <Suspense fallback={<SectionLoading />}>
+        <SkillsSection />
+      </Suspense>
+      
+      <Suspense fallback={<SectionLoading />}>
+        <ProjectsSection />
+      </Suspense>
+      
+      <Suspense fallback={<SectionLoading />}>
+        <DarkMatterSection />
+      </Suspense>
+      
+      <Suspense fallback={<SectionLoading />}>
+        <ContactSection />
+      </Suspense>
+      
       <Footer />
     </div>
   );

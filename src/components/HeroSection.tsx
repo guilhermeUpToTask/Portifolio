@@ -9,7 +9,7 @@ interface HeroSectionProps {
   spring?: MotionValue<number>;
 }
 
-export function HeroSection({ y1, y2, opacity, spring }: HeroSectionProps) {
+const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
   const { scrollYProgress } = useScroll();
   const springValue = spring || scrollYProgress;
 
@@ -141,8 +141,8 @@ export function HeroSection({ y1, y2, opacity, spring }: HeroSectionProps) {
           />
         </motion.div>
       </motion.div>
-
-      
     </section>
   );
-} 
+};
+
+export default HeroSection; 

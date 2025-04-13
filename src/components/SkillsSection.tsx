@@ -4,7 +4,7 @@ import { Rocket, Satellite, Cpu, Code } from 'lucide-react';
 import { FaReact, FaNodeJs, FaPython, FaDocker, FaAws } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit } from 'react-icons/si';
 
-export function SkillsSection() {
+const SkillsSection = () => {
   const skills = [
     {
       category: "Frontend Development",
@@ -122,4 +122,6 @@ export function SkillsSection() {
       </div>
     </section>
   );
-} 
+};
+
+export default SkillsSection; 

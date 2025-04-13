@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-export function SpaceStationSection() {
+const SpaceStationSection = () => {
   return (
     <section id="station" className="relative py-32 px-4">
       <div className="max-w-6xl mx-auto">
@@ -51,4 +51,6 @@ export function SpaceStationSection() {
       </div>
     </section>
   );
-} 
+};
+
+export default SpaceStationSection; 

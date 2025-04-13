@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-export function DarkMatterSection() {
+const DarkMatterSection = () => {
   return (
     <section id="matter" className="relative py-32 px-4">
       <div className="max-w-6xl mx-auto">
@@ -50,4 +50,6 @@ export function DarkMatterSection() {
       </div>
     </section>
   );
-} 
+};
+
+export default DarkMatterSection; 

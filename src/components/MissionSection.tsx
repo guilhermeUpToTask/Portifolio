@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
 import { Rocket, Briefcase, Code } from 'lucide-react';
 
-export function MissionSection() {
+const MissionSection = () => {
   return (
     <section id="mission" className="relative py-32 px-4">
       <div className="max-w-6xl mx-auto">
@@ -40,4 +40,6 @@ export function MissionSection() {
       </div>
     </section>
   );
-} 
+};
+
+export default MissionSection; 

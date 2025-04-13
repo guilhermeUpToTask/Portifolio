@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Boxes, Code, LineChart, CheckCircle2, Circle, Clock, Github, ExternalLink } from 'lucide-react';
 
-export function ProjectsSection() {
+const ProjectsSection = () => {
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -206,4 +206,6 @@ export function ProjectsSection() {
       </div>
     </section>
   );
-} 
+};
+
+export default ProjectsSection; 
