@@ -100,21 +100,6 @@ export function Navigation() {
           </motion.div>
         ))}
 
-        {/* Return to Orbit Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: scrollYProgress.get() > 0.1 ? 1 : 0 }}
-          whileHover={{ scale: 1.1 }}
-        >
-          <Button
-            variant="ghost"
-            size="icon"
-            className="w-9 h-9 rounded-full bg-background/50"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <Rocket className="w-4 h-4 rotate-90" />
-          </Button>
-        </motion.div>
       </div>
     </motion.div>
   );
