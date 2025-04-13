@@ -13,6 +13,13 @@ export function HeroSection({ y1, y2, opacity, spring }: HeroSectionProps) {
   const { scrollYProgress } = useScroll();
   const springValue = spring || scrollYProgress;
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background layers */}
@@ -95,6 +102,7 @@ export function HeroSection({ y1, y2, opacity, spring }: HeroSectionProps) {
             variant="default" 
             size="lg" 
             className="bg-primary/10 backdrop-blur-sm hover:bg-primary/20 transition-all duration-300 hover:scale-105"
+            onClick={() => scrollToSection('projects')}
           >
             View Projects
           </Button>
@@ -102,6 +110,7 @@ export function HeroSection({ y1, y2, opacity, spring }: HeroSectionProps) {
             variant="outline" 
             size="lg" 
             className="border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105"
+            onClick={() => scrollToSection('contact')}
           >
             Contact Me
           </Button>
