@@ -21,9 +21,9 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
       {/* Background layers */}
-      <div className="fixed inset-0 pointer-events-none z-0">
+      <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
         <motion.div
           className="absolute inset-0 opacity-30"
           style={{
@@ -32,22 +32,25 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
             backgroundPosition: 'center',
             y: springValue
           }}
+          aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/80 to-background" aria-hidden="true" />
       </div>
 
       {/* Particles */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" aria-hidden="true">
         <ParticleBackground />
       </div>
       
       <motion.div
         style={{ y: y1, opacity }}
-        className="absolute top-1/4 -left-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl z-0" 
+        className="absolute top-1/4 -left-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl z-0"
+        aria-hidden="true"
       />
       <motion.div
         style={{ y: y2, opacity }}
         className="absolute bottom-1/4 -right-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl z-0"
+        aria-hidden="true"
       />
       
       <motion.div
@@ -103,6 +106,7 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
             size="lg" 
             className="bg-primary/10 backdrop-blur-sm hover:bg-primary/20 transition-all duration-300 hover:scale-105"
             onClick={() => scrollToSection('projects')}
+            aria-label="View my projects"
           >
             View Projects
           </Button>
@@ -111,6 +115,7 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
             size="lg" 
             className="border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105"
             onClick={() => scrollToSection('contact')}
+            aria-label="Contact me"
           >
             Contact Me
           </Button>
@@ -120,6 +125,7 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
       <motion.div
         style={{ y: springValue }}
         className="absolute bottom-10 w-full flex justify-center"
+        aria-hidden="true"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

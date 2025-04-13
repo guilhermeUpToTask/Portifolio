@@ -44,11 +44,13 @@ export function Navigation() {
     <motion.div
       style={{ opacity }}
       className="fixed right-6 top-1/2 -translate-y-1/2 z-50"
+      role="navigation"
+      aria-label="Main navigation"
     >
       <div className="flex flex-col items-center gap-6">
         {/* Constellation Lines */}
-        <div className="absolute inset-0 pointer-events-none">
-          <svg className="w-[60px] h-[300px]">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <svg className="w-[60px] h-[300px]" aria-hidden="true">
             {sections.map((_, index) => {
               if (index < sections.length) {
                 return (
@@ -63,6 +65,7 @@ export function Navigation() {
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: 1 }}
                     transition={{ duration: 1, delay: index * 0.1 }}
+                    aria-hidden="true"
                   />
                 );
               }
@@ -94,8 +97,11 @@ export function Navigation() {
                   : 'bg-background/50 text-muted-foreground'
               }`}
               onClick={() => scrollToSection(section.id)}
+              aria-label={`Go to ${section.label} section`}
+              aria-current={activeSection === section.id ? 'true' : undefined}
             >
               {section.icon}
+              <span className="sr-only">{section.label}</span>
             </Button>
           </motion.div>
         ))}

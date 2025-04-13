@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
 import SectionLoading from './components/SectionLoading';
 import ErrorBoundary from './components/ErrorBoundary';
+import { Navigation } from './components/Navigation';
 
 // Lazy load sections
 const HeroSection = lazy(() => import('./components/HeroSection'));
@@ -21,53 +22,61 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <ErrorBoundary>
-        <Suspense fallback={<SectionLoading />}>
-          <HeroSection y1={y1} y2={y2} opacity={opacity} spring={scrollYProgress} />
-        </Suspense>
-      </ErrorBoundary>
+      <header role="banner">
+        <Navigation />
+      </header>
+      
+      <main role="main">
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <HeroSection y1={y1} y2={y2} opacity={opacity} spring={scrollYProgress} />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary>
-        <Suspense fallback={<SectionLoading />}>
-          <MissionSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <MissionSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary>
-        <Suspense fallback={<SectionLoading />}>
-          <SpaceStationSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <SpaceStationSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary>
-        <Suspense fallback={<SectionLoading />}>
-          <SkillsSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <SkillsSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary>
-        <Suspense fallback={<SectionLoading />}>
-          <ProjectsSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <ProjectsSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary>
-        <Suspense fallback={<SectionLoading />}>
-          <DarkMatterSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <DarkMatterSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary>
-        <Suspense fallback={<SectionLoading />}>
-          <ContactSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <ContactSection />
+          </Suspense>
+        </ErrorBoundary>
+      </main>
 
-      <ErrorBoundary>
-        <Suspense fallback={<SectionLoading />}>
-          <FooterComponent />
-        </Suspense>
-      </ErrorBoundary>
+      <footer role="contentinfo">
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoading />}>
+            <FooterComponent />
+          </Suspense>
+        </ErrorBoundary>
+      </footer>
     </div>
   );
 }
