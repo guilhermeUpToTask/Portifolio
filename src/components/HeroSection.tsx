@@ -1,4 +1,4 @@
-import { motion, MotionValue, useScroll, useTransform, cubicBezier } from 'framer-motion';
+import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ParticleBackground } from './ParticleBackground';
 

@@ -1,6 +1,6 @@
 "use client"
 import { useChat, type UseChatOptions } from "@ai-sdk/react"
- 
+import { type Message } from "@/components/ui/chat-message"
 import { cn } from "@/lib/utils"
 import { Chat } from "@/components/ui/chat"
  
@@ -8,6 +8,7 @@ type ChatBotProps = {
   initialMessages?: UseChatOptions["initialMessages"]
 }
  
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function ChatBot(props: ChatBotProps) {
   const {
     messages,
@@ -34,7 +35,7 @@ export function ChatBot(props: ChatBotProps) {
  
       <Chat
         className="grow"
-        messages={messages}
+        messages={messages as Message[]}
         handleSubmit={handleSubmit}
         input={input}
         handleInputChange={handleInputChange}

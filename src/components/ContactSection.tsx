@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, Twitter, Globe, MessageCircle } from 'lucide-react';
+import { Mail, Github, Linkedin, MessageCircle } from 'lucide-react';
 
 const ContactSection = () => {
   return (
