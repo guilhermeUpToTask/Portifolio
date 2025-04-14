@@ -10,7 +10,7 @@ import { AudioVisualizer } from "@/components/ui/audio-visualizer"
 import { Button } from "@/components/ui/button"
 import { FilePreview } from "@/components/ui/file-preview"
 import { InterruptPrompt } from "@/components/ui/interrupt-prompt"
-import { ReloadIcon, Cross2Icon } from "@radix-ui/react-icons"
+import { ReloadIcon } from "@radix-ui/react-icons"
 
 interface MessageInputBaseProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
