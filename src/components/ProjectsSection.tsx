@@ -9,8 +9,8 @@ const ProjectsSection = () => {
       title: "Task Wise Finances",
       description: "Development of a web application for personal finance management. The application provides a clean and intuitive interface with a calendar to facilitate navigation and user comprehension.",
       icon: <LineChart className="w-6 h-6" />,
-      github: "#",
-      demo: "#",
+      github: "https://github.com/guilhermeUpToTask/TaskWiseFinancesFront",
+      demo: "https://task-wise-finances-front.vercel.app/",
       status: "active",
       tech: ["React", "TypeScript", "Tailwind CSS", "Firebase", "Calendar API"],
       launchDate: "2023-05-15"
@@ -19,7 +19,7 @@ const ProjectsSection = () => {
       title: "Mercado Livre Price Monitoring",
       description: "The project involves a price monitoring system for Mercado Livre. Using the Scrapy library in Python, it collects data daily from a specific selection of products on Mercado Livre. This data is stored in a MongoDB database and exposed through an API built with FastAPI.",
       icon: <Code className="w-6 h-6" />,
-      github: "#",
+      github: "https://github.com/guilhermeUpToTask/mercado_livre_scraper_server",
       demo: "#",
       status: "completed",
       tech: ["Python", "Scrapy", "FastAPI", "MongoDB", "Docker", "React"],
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       description: "Developed a chatbot system using Retrieval-Augmented Generation (RAG) architecture. Leveraged a vectorized database containing personal information, integrated via LangChain and embeddings, to retrieve relevant data and generate natural language responses using a large language model (LLM).",
       icon: <Brain className="w-6 h-6" />,
       github: "#",
-      demo: "#",
+      demo: "#chat",
       status: "in-progress",
       tech: ["LangChain", "Python", "FastAPI", "Vector Database", "LLM", "Embeddings"],
       launchDate: "2025-04-15"
@@ -185,11 +185,21 @@ const ProjectsSection = () => {
                       transition={{ delay: 1.1 + index * 0.2 }}
                       className="flex gap-4"
                     >
-                      <Button variant="outline" size="sm" className="flex-1">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="flex-1"
+                        onClick={() => window.open(project.github, '_blank')}
+                      >
                         <Github className="w-4 h-4 mr-2" />
                         View Code
                       </Button>
-                      <Button variant="default" size="sm" className="flex-1">
+                      <Button 
+                        variant="default" 
+                        size="sm" 
+                        className="flex-1"
+                        onClick={() => window.open(project.demo, '_blank')}
+                      >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Launch Demo
                       </Button>
