@@ -1,13 +1,12 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { Home, Code, Rocket, Clock, Briefcase, BookOpen, Satellite, MessageSquare } from 'lucide-react';
+import { Home, Code, Rocket, Clock, BookOpen, Satellite, MessageSquare } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const sections = [
   { id: 'hero', label: 'Home', icon: <Home className="w-4 h-4" /> },
   { id: 'chat', label: 'Chat', icon: <MessageSquare className="w-4 h-4" /> },
   { id: 'timeline', label: 'Timeline', icon: <Clock className="w-4 h-4" /> },
-  { id: 'station', label: 'Space Station', icon: <Briefcase className="w-4 h-4" /> },
   { id: 'skills', label: 'Skills', icon: <Code className="w-4 h-4" /> },
   { id: 'projects', label: 'Projects', icon: <Rocket className="w-4 h-4" /> },
   { id: 'matter', label: 'Dark Matter', icon: <BookOpen className="w-4 h-4" /> },

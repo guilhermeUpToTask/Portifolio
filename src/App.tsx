@@ -8,7 +8,6 @@ import { Navigation } from './components/Navigation';
 const HeroSection = lazy(() => import('./components/HeroSection'));
 const ChatSection = lazy (() => import('./components/ChatSection'));
 const TimelineSection = lazy(() => import('./components/TimelineSection'));
-const SpaceStationSection = lazy(() => import('./components/SpaceStationSection'));
 const SkillsSection = lazy(() => import('./components/SkillsSection'));
 const ProjectsSection = lazy(() => import('./components/ProjectsSection'));
 const DarkMatterSection = lazy(() => import('./components/DarkMatterSection'));
@@ -47,12 +46,6 @@ function App() {
         <ErrorBoundary>
           <Suspense fallback={<SectionLoading />}>
             <TimelineSection />
-          </Suspense>
-        </ErrorBoundary>
-
-        <ErrorBoundary>
-          <Suspense fallback={<SectionLoading />}>
-            <SpaceStationSection />
           </Suspense>
         </ErrorBoundary>
 
