@@ -13,8 +13,8 @@ const MissionSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Mission Timeline</h2>
-          <p className="text-muted-foreground">My journey through the cosmos of technology</p>
+          <h2 className="text-4xl font-bold mb-4">Timeline</h2>
+          <p className="text-muted-foreground">My journey through the technology world</p>
         </motion.div>
         
         <Timeline className="relative">

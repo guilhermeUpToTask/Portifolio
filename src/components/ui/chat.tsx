@@ -222,7 +222,6 @@ export function Chat({
             setFiles={setFiles}
             stop={handleStop}
             isGenerating={isGenerating}
-            transcribeAudio={transcribeAudio}
           />
         )}
       </ChatForm>
