@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
-import { Rocket, Satellite, Cpu, Code } from 'lucide-react';
+import { Rocket, Satellite, Cpu, Code, Layers, Shield, Brain } from 'lucide-react';
 import { FaReact, FaNodeJs, FaPython, FaDocker, FaAws } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit } from 'react-icons/si';
+import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit, SiFastapi, SiNginx, SiLinux } from 'react-icons/si';
 
 const SkillsSection = () => {
   const skills = [
@@ -14,7 +14,9 @@ const SkillsSection = () => {
         { name: "React", level: 90, icon: <FaReact className="w-6 h-6" />, color: "text-blue-400", description: "Advanced component architecture and state management" },
         { name: "TypeScript", level: 85, icon: <SiTypescript className="w-6 h-6" />, color: "text-blue-600", description: "Type-safe development and advanced type features" },
         { name: "Tailwind CSS", level: 88, icon: <Code className="w-6 h-6" />, color: "text-cyan-400", description: "Utility-first CSS framework for rapid UI development" },
-        { name: "Next.js", level: 80, icon: <SiNextdotjs className="w-6 h-6" />, color: "text-black dark:text-white", description: "Server-side rendering and static site generation" }
+        { name: "Next.js", level: 80, icon: <SiNextdotjs className="w-6 h-6" />, color: "text-black dark:text-white", description: "Server-side rendering and static site generation" },
+        { name: "shadcn/ui", level: 85, icon: <Layers className="w-6 h-6" />, color: "text-purple-400", description: "Reusable, accessible, and customizable UI components" },
+        { name: "Semantic HTML", level: 90, icon: <Code className="w-6 h-6" />, color: "text-orange-500", description: "Accessible and meaningful HTML structure" }
       ]
     },
     {
@@ -24,8 +26,10 @@ const SkillsSection = () => {
       items: [
         { name: "Node.js", level: 85, icon: <FaNodeJs className="w-6 h-6" />, color: "text-green-500", description: "Event-driven architecture and non-blocking I/O" },
         { name: "Python", level: 90, icon: <FaPython className="w-6 h-6" />, color: "text-yellow-500", description: "Clean code and efficient algorithms" },
+        { name: "FastAPI", level: 85, icon: <SiFastapi className="w-6 h-6" />, color: "text-teal-500", description: "Modern, fast web framework for building APIs" },
         { name: "PostgreSQL", level: 80, icon: <SiPostgresql className="w-6 h-6" />, color: "text-blue-500", description: "Relational database design and optimization" },
-        { name: "REST APIs", level: 88, icon: <Code className="w-6 h-6" />, color: "text-purple-500", description: "RESTful architecture and API design" }
+        { name: "LangChain", level: 80, icon: <Brain className="w-6 h-6" />, color: "text-purple-500", description: "Building applications with LLMs and AI agents" },
+        { name: "JWT", level: 85, icon: <Shield className="w-6 h-6" />, color: "text-red-500", description: "Secure authentication and authorization" }
       ]
     },
     {
@@ -36,6 +40,8 @@ const SkillsSection = () => {
         { name: "Docker", level: 82, icon: <FaDocker className="w-6 h-6" />, color: "text-blue-400", description: "Containerization and microservices architecture" },
         { name: "Git", level: 90, icon: <SiGit className="w-6 h-6" />, color: "text-orange-500", description: "Version control and collaborative development" },
         { name: "AWS", level: 75, icon: <FaAws className="w-6 h-6" />, color: "text-yellow-500", description: "Cloud infrastructure and services" },
+        { name: "Nginx", level: 80, icon: <SiNginx className="w-6 h-6" />, color: "text-green-600", description: "Web server and reverse proxy configuration" },
+        { name: "Linux", level: 85, icon: <SiLinux className="w-6 h-6" />, color: "text-yellow-600", description: "System administration and shell scripting" },
         { name: "CI/CD", level: 80, icon: <Code className="w-6 h-6" />, color: "text-green-500", description: "Continuous integration and deployment pipelines" }
       ]
     }
