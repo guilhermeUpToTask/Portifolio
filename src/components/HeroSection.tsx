@@ -81,7 +81,7 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
               repeatType: "reverse",
             }}
           >
-            Full Stack Developer
+            Full Stack Web Developer
           </motion.div>
         </motion.div>
         
