@@ -10,7 +10,6 @@ const ChatSection = lazy (() => import('./components/ChatSection'));
 const TimelineSection = lazy(() => import('./components/TimelineSection'));
 const SkillsSection = lazy(() => import('./components/SkillsSection'));
 const ProjectsSection = lazy(() => import('./components/ProjectsSection'));
-const DarkMatterSection = lazy(() => import('./components/DarkMatterSection'));
 const ContactSection = lazy(() => import('./components/ContactSection'));
 const FooterComponent = lazy(() => import('./components/Footer'));
 
@@ -58,12 +57,6 @@ function App() {
         <ErrorBoundary>
           <Suspense fallback={<SectionLoading />}>
             <ProjectsSection />
-          </Suspense>
-        </ErrorBoundary>
-
-        <ErrorBoundary>
-          <Suspense fallback={<SectionLoading />}>
-            <DarkMatterSection />
           </Suspense>
         </ErrorBoundary>
 
