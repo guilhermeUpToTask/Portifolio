@@ -1,42 +1,39 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Boxes, Code, LineChart, CheckCircle2, Circle, Clock, Github, ExternalLink } from 'lucide-react';
+import { Brain, LineChart, Code, CheckCircle2, Circle, Clock, Github, ExternalLink } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React and Node.js",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1600&h=900",
-      icon: <Boxes className="w-6 h-6" />,
-      github: "#",
-      demo: "#",
-      status: "completed",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      launchDate: "2023-12-15"
-    },
-    {
-      title: "AI Chat Application",
-      description: "Real-time chat app with AI-powered responses",
-      image: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?q=80&w=1600&h=900",
-      icon: <Code className="w-6 h-6" />,
-      github: "#",
-      demo: "#",
-      status: "active",
-      tech: ["Next.js", "OpenAI", "WebSocket", "Redis"],
-      launchDate: "2024-02-01"
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Beautiful data visualization dashboard with real-time updates",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&h=900",
+      title: "Task Wise Finances",
+      description: "Development of a web application for personal finance management. The application provides a clean and intuitive interface with a calendar to facilitate navigation and user comprehension.",
       icon: <LineChart className="w-6 h-6" />,
       github: "#",
       demo: "#",
+      status: "active",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Firebase", "Calendar API"],
+      launchDate: "2023-05-15"
+    },
+    {
+      title: "Mercado Livre Price Monitoring",
+      description: "The project involves a price monitoring system for Mercado Livre. Using the Scrapy library in Python, it collects data daily from a specific selection of products on Mercado Livre. This data is stored in a MongoDB database and exposed through an API built with FastAPI.",
+      icon: <Code className="w-6 h-6" />,
+      github: "#",
+      demo: "#",
+      status: "completed",
+      tech: ["Python", "Scrapy", "FastAPI", "MongoDB", "Docker", "React"],
+      launchDate: "2024-03-01"
+    },
+    {
+      title: "IA Assistant – RAG Chatbot",
+      description: "Developed a chatbot system using Retrieval-Augmented Generation (RAG) architecture. Leveraged a vectorized database containing personal information, integrated via LangChain and embeddings, to retrieve relevant data and generate natural language responses using a large language model (LLM).",
+      icon: <Brain className="w-6 h-6" />,
+      github: "#",
+      demo: "#",
       status: "in-progress",
-      tech: ["React", "D3.js", "Express", "PostgreSQL"],
-      launchDate: "2024-04-15"
+      tech: ["LangChain", "Python", "FastAPI", "Vector Database", "LLM", "Embeddings"],
+      launchDate: "2025-04-15"
     }
   ];
 
@@ -49,7 +46,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 relative z-10"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">Mission Control</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">Projects</h2>
           <p className="text-gray-400">Current and upcoming projects</p>
         </motion.div>
 
@@ -156,7 +153,7 @@ const ProjectsSection = () => {
                     className="space-y-4"
                   >
                     <div>
-                      <h4 className="text-sm font-medium mb-2">Mission Parameters</h4>
+                      <h4 className="text-sm font-medium mb-2">Tech Stack</h4>
                       <div className="flex flex-wrap gap-2">
                         {project.tech.map((tech, i) => (
                           <motion.span
@@ -172,7 +169,7 @@ const ProjectsSection = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium mb-2">Launch Schedule</h4>
+                      <h4 className="text-sm font-medium mb-2">Date</h4>
                       <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
