@@ -10,9 +10,9 @@ export function PromptSuggestions({
   suggestions,
 }: PromptSuggestionsProps) {
   return (
-    <div className="space-y-6 space-y-6">
+    <div className="space-y-6">
       <h2 className="text-center text-2xl font-bold">{label}</h2>
-      <div className="flex gap-6 text-sm">
+      <div className="flex gap-6 text-sm flex-wrap">
         {suggestions.map((suggestion) => (
           <button
             key={suggestion}
