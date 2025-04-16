@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import SectionLoading from './components/SectionLoading';
 import ErrorBoundary from './components/ErrorBoundary';
 import { Navigation } from './components/Navigation';
@@ -16,7 +15,6 @@ const ContactSection = lazy(() => import('./components/ContactSection'));
 const FooterComponent = lazy(() => import('./components/Footer'));
 
 function App() {
-  const { t } = useTranslation();
   const { scrollYProgress } = useScroll();
   const y1 = useTransform(scrollYProgress, [0, 1], [0, 300]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -300]);
