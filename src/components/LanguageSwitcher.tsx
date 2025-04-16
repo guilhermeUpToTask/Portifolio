@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next';
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -8,23 +10,33 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <button
+    <div className="fixed top-4 right-4 z-50 flex items-center gap-2 p-2 rounded-full bg-background/80 backdrop-blur-sm border border-primary/20 shadow-lg">
+      <Button
+        variant="ghost"
+        size="sm"
         onClick={() => changeLanguage('en')}
-        className={`px-2 py-1 rounded ${
-          i18n.language === 'en' ? 'bg-blue-500 text-white' : 'bg-gray-200'
-        }`}
+        className={cn(
+          "rounded-full transition-all duration-300",
+          i18n.language === 'en' 
+            ? "bg-primary/10 text-primary hover:bg-primary/20" 
+            : "hover:bg-primary/5"
+        )}
       >
         EN
-      </button>
-      <button
+      </Button>
+      <Button
+        variant="ghost"
+        size="sm"
         onClick={() => changeLanguage('pt')}
-        className={`px-2 py-1 rounded ${
-          i18n.language === 'pt' ? 'bg-blue-500 text-white' : 'bg-gray-200'
-        }`}
+        className={cn(
+          "rounded-full transition-all duration-300",
+          i18n.language === 'pt' 
+            ? "bg-primary/10 text-primary hover:bg-primary/20" 
+            : "hover:bg-primary/5"
+        )}
       >
         PT
-      </button>
+      </Button>
     </div>
   );
 };

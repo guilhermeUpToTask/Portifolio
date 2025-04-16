@@ -76,6 +76,7 @@
   "chat": {
     "title": "Converse comigo",
     "placeholder": "Digite sua mensagem aqui...",
+    "placeholder_suggestions": "O que você gostaria de saber sobre mim?",
     "send": "Enviar",
     "suggestions": {
       "technologies": "Quais tecnologias o desenvolvedor utiliza?",

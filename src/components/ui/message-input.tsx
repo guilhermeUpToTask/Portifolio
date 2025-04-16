@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button"
 import { FilePreview } from "@/components/ui/file-preview"
 import { InterruptPrompt } from "@/components/ui/interrupt-prompt"
 import { ReloadIcon } from "@radix-ui/react-icons"
+import { useTranslation } from "react-i18next"
 
 interface MessageInputBaseProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
@@ -37,7 +38,6 @@ type MessageInputProps =
   | MessageInputWithAttachmentsProps
 
 export function MessageInput({
-  placeholder = "Ask AI...",
   className,
   onKeyDown: onKeyDownProp,
   submitOnEnter = true,
@@ -49,7 +49,8 @@ export function MessageInput({
 }: MessageInputProps) {
   const [isDragging, setIsDragging] = useState(false)
   const [showInterruptPrompt, setShowInterruptPrompt] = useState(false)
-
+  const { t } = useTranslation();
+  
   const {
     isListening,
     isSpeechSupported,
@@ -200,7 +201,7 @@ export function MessageInput({
         <div className="relative flex-1">
           <textarea
             aria-label="Write your prompt here"
-            placeholder={placeholder}
+            placeholder={t('chat.placeholder_suggestions')}
             ref={textAreaRef}
             onPaste={onPaste}
             onKeyDown={onKeyDown}
