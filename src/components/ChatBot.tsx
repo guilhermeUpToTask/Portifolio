@@ -18,7 +18,7 @@ export function ChatBot() {
     isLoading,
     setMessages,
 } = useChat({
-    api: "http://localhost:8000/api/chat",
+    api: "https://taskmaneger.zapto.org/api/rag/api/chat",
     body: {
         stream: true,
     },
