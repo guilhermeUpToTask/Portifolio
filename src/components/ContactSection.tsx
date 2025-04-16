@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Mail, Github, Linkedin, MessageCircle } from 'lucide-react';
 
+//Needs to make dynamic components
 const ContactSection = () => {
   return (
     <section id="contact" className="relative py-32 px-4">
@@ -37,7 +38,7 @@ const ContactSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-colors cursor-pointer"
+                    className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-colors cursor-pointer truncate"
                     onClick={() => window.open('mailto:guilhermeaugustomatosferreira@gmail.com', '_blank')}
                   >
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
