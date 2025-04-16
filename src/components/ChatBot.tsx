@@ -29,7 +29,7 @@ export function ChatBot() {
 
  
   return (
-    <div className={cn("flex", "flex-col", "h-[500px]", "w-full")}>
+    <div className={cn("flex", "flex-col", "h-[500px]", "w-full", "overflow-y-auto")}>
  
       <Chat
         className="grow"
