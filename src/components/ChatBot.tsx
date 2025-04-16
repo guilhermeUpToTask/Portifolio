@@ -3,11 +3,11 @@ import { useChat } from "@ai-sdk/react"
 import { type Message } from "@/components/ui/chat-message"
 import { cn } from "@/lib/utils"
 import { Chat } from "@/components/ui/chat"
- 
-
+import { useTranslation } from 'react-i18next'
  
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function ChatBot() {
+  const { t } = useTranslation();
   const {
     messages,
     input,
@@ -42,10 +42,10 @@ export function ChatBot() {
         append={append}
         setMessages={setMessages}
         suggestions={[
-          "What are the technologies the developer uses?",
-          "What is the developer's favorite frontend technology?",
-          "What security implementations does the developer use?",
-          "Does the developer use any AI tools?",
+          t('chat.suggestions.technologies'),
+          t('chat.suggestions.favorite_tech'),
+          t('chat.suggestions.security'),
+          t('chat.suggestions.ai_tools'),
         ]}
       />
     </div>

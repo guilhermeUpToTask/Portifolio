@@ -3,46 +3,49 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Rocket, Satellite, Cpu, Code, Layers, Shield, Brain, ExternalLink } from 'lucide-react';
 import { FaReact, FaNodeJs, FaPython, FaDocker, FaAws } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit, SiFastapi, SiNginx, SiLinux } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 
 const SkillsSection = () => {
+  const { t } = useTranslation();
+  
   const skills = [
     {
-      category: "Frontend Development",
+      category: t('skills.frontend'),
       icon: <Rocket className="w-8 h-8 text-blue-400" />,
-      description: "Building modern, responsive user interfaces with cutting-edge technologies",
+      description: t('skills.descriptions.frontend'),
       items: [
-        { name: "React", level: 90, icon: <FaReact className="w-6 h-6" />, color: "text-blue-400", description: "Advanced component architecture and state management", link: "https://react.dev" },
-        { name: "TypeScript", level: 85, icon: <SiTypescript className="w-6 h-6" />, color: "text-blue-600", description: "Type-safe development and advanced type features", link: "https://www.typescriptlang.org" },
-        { name: "Tailwind CSS", level: 88, icon: <Code className="w-6 h-6" />, color: "text-cyan-400", description: "Utility-first CSS framework for rapid UI development", link: "https://tailwindcss.com" },
-        { name: "Next.js", level: 80, icon: <SiNextdotjs className="w-6 h-6" />, color: "text-black dark:text-white", description: "Server-side rendering and static site generation", link: "https://nextjs.org" },
-        { name: "shadcn/ui", level: 85, icon: <Layers className="w-6 h-6" />, color: "text-purple-400", description: "Reusable, accessible, and customizable UI components", link: "https://ui.shadcn.com" },
-        { name: "Semantic HTML", level: 90, icon: <Code className="w-6 h-6" />, color: "text-orange-500", description: "Accessible and meaningful HTML structure", link: "https://developer.mozilla.org/en-US/docs/Glossary/Semantics" }
+        { name: "React", level: 90, icon: <FaReact className="w-6 h-6" />, color: "text-blue-400", description: t('skills.items.react'), link: "https://react.dev" },
+        { name: "TypeScript", level: 85, icon: <SiTypescript className="w-6 h-6" />, color: "text-blue-600", description: t('skills.items.typescript'), link: "https://www.typescriptlang.org" },
+        { name: "Tailwind CSS", level: 88, icon: <Code className="w-6 h-6" />, color: "text-cyan-400", description: t('skills.items.tailwind'), link: "https://tailwindcss.com" },
+        { name: "Next.js", level: 80, icon: <SiNextdotjs className="w-6 h-6" />, color: "text-black dark:text-white", description: t('skills.items.nextjs'), link: "https://nextjs.org" },
+        { name: "shadcn/ui", level: 85, icon: <Layers className="w-6 h-6" />, color: "text-purple-400", description: t('skills.items.shadcn'), link: "https://ui.shadcn.com" },
+        { name: "Semantic HTML", level: 90, icon: <Code className="w-6 h-6" />, color: "text-orange-500", description: t('skills.items.html'), link: "https://developer.mozilla.org/en-US/docs/Glossary/Semantics" }
       ]
     },
     {
-      category: "Backend Development",
+      category: t('skills.backend'),
       icon: <Satellite className="w-8 h-8 text-green-400" />,
-      description: "Designing scalable and efficient server-side applications",
+      description: t('skills.descriptions.backend'),
       items: [
-        { name: "Node.js", level: 85, icon: <FaNodeJs className="w-6 h-6" />, color: "text-green-500", description: "Event-driven architecture and non-blocking I/O", link: "https://nodejs.org" },
-        { name: "Python", level: 90, icon: <FaPython className="w-6 h-6" />, color: "text-yellow-500", description: "Clean code and efficient algorithms", link: "https://www.python.org" },
-        { name: "FastAPI", level: 85, icon: <SiFastapi className="w-6 h-6" />, color: "text-teal-500", description: "Modern, fast web framework for building APIs", link: "https://fastapi.tiangolo.com" },
-        { name: "PostgreSQL", level: 80, icon: <SiPostgresql className="w-6 h-6" />, color: "text-blue-500", description: "Relational database design and optimization", link: "https://www.postgresql.org" },
-        { name: "LangChain", level: 80, icon: <Brain className="w-6 h-6" />, color: "text-purple-500", description: "Building applications with LLMs and AI agents", link: "https://python.langchain.com" },
-        { name: "JWT", level: 85, icon: <Shield className="w-6 h-6" />, color: "text-red-500", description: "Secure authentication and authorization", link: "https://jwt.io" }
+        { name: "Node.js", level: 85, icon: <FaNodeJs className="w-6 h-6" />, color: "text-green-500", description: t('skills.items.node'), link: "https://nodejs.org" },
+        { name: "Python", level: 90, icon: <FaPython className="w-6 h-6" />, color: "text-yellow-500", description: t('skills.items.python'), link: "https://www.python.org" },
+        { name: "FastAPI", level: 85, icon: <SiFastapi className="w-6 h-6" />, color: "text-teal-500", description: t('skills.items.fastapi'), link: "https://fastapi.tiangolo.com" },
+        { name: "PostgreSQL", level: 80, icon: <SiPostgresql className="w-6 h-6" />, color: "text-blue-500", description: t('skills.items.postgres'), link: "https://www.postgresql.org" },
+        { name: "LangChain", level: 80, icon: <Brain className="w-6 h-6" />, color: "text-purple-500", description: t('skills.items.langchain'), link: "https://python.langchain.com" },
+        { name: "JWT", level: 85, icon: <Shield className="w-6 h-6" />, color: "text-red-500", description: t('skills.items.jwt'), link: "https://jwt.io" }
       ]
     },
     {
-      category: "DevOps & Tools",
+      category: t('skills.tools'),
       icon: <Cpu className="w-8 h-8 text-orange-400" />,
-      description: "Streamlining development workflows and deployment processes",
+      description: t('skills.descriptions.tools'),
       items: [
-        { name: "Docker", level: 82, icon: <FaDocker className="w-6 h-6" />, color: "text-blue-400", description: "Containerization and microservices architecture", link: "https://www.docker.com" },
-        { name: "Git", level: 90, icon: <SiGit className="w-6 h-6" />, color: "text-orange-500", description: "Version control and collaborative development", link: "https://git-scm.com" },
-        { name: "AWS", level: 75, icon: <FaAws className="w-6 h-6" />, color: "text-yellow-500", description: "Cloud infrastructure and services", link: "https://aws.amazon.com" },
-        { name: "Nginx", level: 80, icon: <SiNginx className="w-6 h-6" />, color: "text-green-600", description: "Web server and reverse proxy configuration", link: "https://www.nginx.com" },
-        { name: "Linux", level: 85, icon: <SiLinux className="w-6 h-6" />, color: "text-yellow-600", description: "System administration and shell scripting", link: "https://www.linux.org" },
-        { name: "CI/CD", level: 80, icon: <Code className="w-6 h-6" />, color: "text-green-500", description: "Continuous integration and deployment pipelines", link: "https://www.redhat.com/en/topics/devops/what-is-ci-cd" }
+        { name: "Docker", level: 82, icon: <FaDocker className="w-6 h-6" />, color: "text-blue-400", description: t('skills.items.docker'), link: "https://www.docker.com" },
+        { name: "Git", level: 90, icon: <SiGit className="w-6 h-6" />, color: "text-orange-500", description: t('skills.items.git'), link: "https://git-scm.com" },
+        { name: "AWS", level: 75, icon: <FaAws className="w-6 h-6" />, color: "text-yellow-500", description: t('skills.items.aws'), link: "https://aws.amazon.com" },
+        { name: "Nginx", level: 80, icon: <SiNginx className="w-6 h-6" />, color: "text-green-600", description: t('skills.items.nginx'), link: "https://www.nginx.com" },
+        { name: "Linux", level: 85, icon: <SiLinux className="w-6 h-6" />, color: "text-yellow-600", description: t('skills.items.linux'), link: "https://www.linux.org" },
+        { name: "CI/CD", level: 80, icon: <Code className="w-6 h-6" />, color: "text-green-500", description: t('skills.items.cicd'), link: "https://www.redhat.com/en/topics/devops/what-is-ci-cd" }
       ]
     }
   ];
@@ -56,8 +59,8 @@ const SkillsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">Technical Skills</h2>
-          <p className="text-gray-400">Technologies I work with</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">{t('skills.title')}</h2>
+          <p className="text-gray-400">{t('skills.subtitle')}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">

@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
 import { GraduationCap, Briefcase, Code, BookOpen, Building2, Rocket } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const TimelineSection = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="timeline" className="relative py-32 px-4">
       <div className="max-w-6xl mx-auto">
@@ -13,45 +16,45 @@ const TimelineSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Timeline</h2>
-          <p className="text-muted-foreground">My journey through education and professional experience</p>
+          <h2 className="text-4xl font-bold mb-4">{t('timeline.title')}</h2>
+          <p className="text-muted-foreground">{t('timeline.description')}</p>
         </motion.div>
         
         <Timeline className="relative">
           <TimelineItem
             date="2014 – 2017"
-            title="Floriano Peixoto State School"
-            description="High School/Technical Course in Informatics"
+            title={t('timeline.items.school.title')}
+            description={t('timeline.items.school.description')}
             icon={<GraduationCap className="w-4 h-4" />}
           />
           <TimelineItem
             date="Jan 2017 – Apr 2017"
-            title="NB Informática"
-            description="Intern - Provided technical support, diagnostics, and computer maintenance, resolving both hardware and software issues."
+            title={t('timeline.items.nb.title')}
+            description={t('timeline.items.nb.description')}
             icon={<Briefcase className="w-4 h-4" />}
           />
           <TimelineItem
             date="2018 – 2019"
-            title="UTFPR, Guarapuava"
-            description="Internet Systems Technology (Incomplete)"
+            title={t('timeline.items.utfpr.title')}
+            description={t('timeline.items.utfpr.description')}
             icon={<BookOpen className="w-4 h-4" />}
           />
           <TimelineItem
             date="Since Jan 2022"
-            title="Galera Burger"
-            description="Manager - Oversees operations and team management in a high-demand environment, enhancing leadership, organizational, and problem-solving skills."
+            title={t('timeline.items.galera.title')}
+            description={t('timeline.items.galera.description')}
             icon={<Building2 className="w-4 h-4" />}
           />
           <TimelineItem
             date="2023 – 2024"
-            title="Task Wise Finances"
-            description="Application for personal financial management featuring an intuitive interface."
+            title={t('timeline.items.taskwise.title')}
+            description={t('timeline.items.taskwise.description')}
             icon={<Code className="w-4 h-4" />}
           />
           <TimelineItem
             date="2024"
-            title="Mercado Livre Price Monitoring"
-            description="System (in development) for price monitoring using Python (Scrapy), FastAPI, SQLite, Docker, and React for data visualization."
+            title={t('timeline.items.ml_monitor.title')}
+            description={t('timeline.items.ml_monitor.description')}
             icon={<Rocket className="w-4 h-4" />}
           />
         </Timeline>

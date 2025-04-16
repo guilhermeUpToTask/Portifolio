@@ -1,0 +1,119 @@
+{
+  "welcome": "Welcome to my portfolio",
+  "about": "About Me",
+  "projects": "Projects",
+  "contact": "Contact",
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies I work with",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "tools": "DevOps & Tools",
+    "descriptions": {
+      "frontend": "Building modern, responsive user interfaces with cutting-edge technologies",
+      "backend": "Designing scalable and efficient server-side applications",
+      "tools": "Streamlining development workflows and deployment processes"
+    },
+    "items": {
+      "react": "Advanced component architecture and state management",
+      "typescript": "Type-safe development and advanced type features",
+      "tailwind": "Utility-first CSS framework for rapid UI development",
+      "nextjs": "Server-side rendering and static site generation",
+      "shadcn": "Reusable, accessible, and customizable UI components",
+      "html": "Accessible and meaningful HTML structure",
+      "node": "Event-driven architecture and non-blocking I/O",
+      "python": "Clean code and efficient algorithms",
+      "fastapi": "Modern, fast web framework for building APIs",
+      "postgres": "Relational database design and optimization",
+      "langchain": "Building applications with LLMs and AI agents",
+      "jwt": "Secure authentication and authorization",
+      "docker": "Containerization and microservices architecture",
+      "git": "Version control and collaborative development",
+      "aws": "Cloud infrastructure and services",
+      "nginx": "Web server and reverse proxy configuration",
+      "linux": "System administration and shell scripting",
+      "cicd": "Continuous integration and deployment pipelines"
+    }
+  },
+  "experience": "Experience",
+  "education": "Education",
+  "language": "Language",
+  "english": "English",
+  "portuguese": "Portuguese",
+  "download_cv": "Download CV",
+  "view_project": "View Project",
+  "send_message": "Send Message",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Submit",
+  "scroll_to_explore": "Scroll to explore",
+  "hero": {
+    "title": "Hi, I'm",
+    "subtitle": "Full Stack Developer",
+    "description": "Passionate about creating innovative solutions and building amazing web applications"
+  },
+  "chat": {
+    "title": "Chat with me",
+    "placeholder": "Type your message here...",
+    "send": "Send",
+    "suggestions": {
+      "technologies": "What are the technologies the developer uses?",
+      "favorite_tech": "What is the developer's favorite frontend technology?",
+      "security": "What security implementations does the developer use?",
+      "ai_tools": "Does the developer use any AI tools?"
+    }
+  },
+  "timeline": {
+    "title": "Timeline",
+    "description": "My journey through education and professional experience",
+    "items": {
+      "school": {
+        "title": "Floriano Peixoto State School",
+        "description": "High School/Technical Course in Informatics"
+      },
+      "nb": {
+        "title": "NB Informática",
+        "description": "Intern - Provided technical support, diagnostics, and computer maintenance, resolving both hardware and software issues."
+      },
+      "utfpr": {
+        "title": "UTFPR, Guarapuava",
+        "description": "Internet Systems Technology (Incomplete)"
+      },
+      "galera": {
+        "title": "Galera Burger",
+        "description": "Manager - Oversees operations and team management in a high-demand environment, enhancing leadership, organizational, and problem-solving skills."
+      },
+      "taskwise": {
+        "title": "Task Wise Finances",
+        "description": "Application for personal financial management featuring an intuitive interface."
+      },
+      "ml_monitor": {
+        "title": "Mercado Livre Price Monitoring",
+        "description": "System (in development) for price monitoring using Python (Scrapy), FastAPI, SQLite, Docker, and React for data visualization."
+      }
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Here are some of my recent projects",
+    "tech_stack": "Tech Stack",
+    "live_demo": "Live Demo",
+    "source_code": "Source Code"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Feel free to reach out to me for any questions or opportunities",
+    "form": {
+      "name_placeholder": "Your name",
+      "email_placeholder": "Your email",
+      "message_placeholder": "Your message",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 All rights reserved",
+    "made_with": "Made with ❤️ using React"
+  }
+} 

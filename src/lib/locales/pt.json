@@ -1,0 +1,117 @@
+{
+  "welcome": "Bem-vindo ao meu portfólio",
+  "about": "Sobre Mim",
+  "projects": "Projetos",
+  "contact": "Contato",
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "subtitle": "Tecnologias com as quais trabalho",
+    "frontend": "Desenvolvimento Frontend",
+    "backend": "Desenvolvimento Backend",
+    "tools": "DevOps & Ferramentas",
+    "descriptions": {
+      "frontend": "Construindo interfaces de usuário modernas e responsivas com tecnologias de ponta",
+      "backend": "Projetando aplicações server-side escaláveis e eficientes",
+      "tools": "Otimizando fluxos de trabalho de desenvolvimento e processos de implantação"
+    },
+    "items": {
+      "react": "Arquitetura avançada de componentes e gerenciamento de estado",
+      "typescript": "Desenvolvimento com tipagem estática e recursos avançados de tipos",
+      "tailwind": "Framework CSS utility-first para desenvolvimento rápido de UI",
+      "nextjs": "Renderização do lado do servidor e geração de sites estáticos",
+      "shadcn": "Componentes UI reutilizáveis, acessíveis e personalizáveis",
+      "html": "Estrutura HTML acessível e semântica",
+      "node": "Arquitetura orientada a eventos e I/O não bloqueante",
+      "python": "Código limpo e algoritmos eficientes",
+      "fastapi": "Framework web moderno e rápido para construção de APIs",
+      "postgres": "Design e otimização de banco de dados relacional",
+      "langchain": "Construindo aplicações com LLMs e agentes de IA",
+      "jwt": "Autenticação e autorização seguras",
+      "docker": "Arquitetura de microsserviços e containerização",
+      "git": "Controle de versão e desenvolvimento colaborativo",
+      "aws": "Infraestrutura e serviços em nuvem",
+      "nginx": "Configuração de servidor web e proxy reverso",
+      "linux": "Administração de sistema e scripts shell",
+      "cicd": "Pipelines de integração e implantação contínuas"
+    }
+  },
+  "language": "Idioma",
+  "english": "Inglês",
+  "portuguese": "Português",
+  "download_cv": "Baixar CV",
+  "view_project": "Ver Projeto",
+  "send_message": "Enviar Mensagem",
+  "name": "Nome",
+  "email": "E-mail",
+  "message": "Mensagem",
+  "submit": "Enviar",
+  "scroll_to_explore": "Role para explorar",
+  "hero": {
+    "title": "Olá, eu sou",
+    "subtitle": "Desenvolvedor Full Stack",
+    "description": "Apaixonado por criar soluções inovadoras e construir aplicações web incríveis"
+  },
+  "chat": {
+    "title": "Converse comigo",
+    "placeholder": "Digite sua mensagem aqui...",
+    "send": "Enviar",
+    "suggestions": {
+      "technologies": "Quais tecnologias o desenvolvedor utiliza?",
+      "favorite_tech": "Qual é a tecnologia frontend favorita do desenvolvedor?",
+      "security": "Quais implementações de segurança o desenvolvedor utiliza?",
+      "ai_tools": "O desenvolvedor utiliza alguma ferramenta de IA?"
+    }
+  },
+  "timeline": {
+    "title": "Linha do Tempo",
+    "description": "Minha jornada através da educação e experiência profissional",
+    "items": {
+      "school": {
+        "title": "Escola Estadual Floriano Peixoto",
+        "description": "Ensino Médio/Curso Técnico em Informática"
+      },
+      "nb": {
+        "title": "NB Informática",
+        "description": "Estagiário - Prestou suporte técnico, diagnósticos e manutenção de computadores, resolvendo problemas de hardware e software."
+      },
+      "utfpr": {
+        "title": "UTFPR, Guarapuava",
+        "description": "Tecnologia em Sistemas para Internet (Incompleto)"
+      },
+      "galera": {
+        "title": "Galera Burger",
+        "description": "Gerente - Supervisiona operações e gestão de equipe em um ambiente de alta demanda, aprimorando habilidades de liderança, organização e resolução de problemas."
+      },
+      "taskwise": {
+        "title": "Task Wise Finances",
+        "description": "Aplicativo para gestão financeira pessoal com interface intuitiva."
+      },
+      "ml_monitor": {
+        "title": "Monitoramento de Preços Mercado Livre",
+        "description": "Sistema (em desenvolvimento) para monitoramento de preços usando Python (Scrapy), FastAPI, SQLite, Docker e React para visualização de dados."
+      }
+    }
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "description": "Aqui estão alguns dos meus projetos recentes",
+    "tech_stack": "Tecnologias Utilizadas",
+    "live_demo": "Demonstração",
+    "source_code": "Código Fonte"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Sinta-se à vontade para entrar em contato comigo para qualquer dúvida ou oportunidade",
+    "form": {
+      "name_placeholder": "Seu nome",
+      "email_placeholder": "Seu e-mail",
+      "message_placeholder": "Sua mensagem",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Todos os direitos reservados",
+    "made_with": "Feito com ❤️ usando React"
+  }
+} 

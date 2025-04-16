@@ -1,6 +1,7 @@
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ParticleBackground } from './ParticleBackground';
+import { useTranslation } from 'react-i18next';
 
 interface HeroSectionProps {
   y1: MotionValue<number>;
@@ -10,6 +11,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
+  const { t } = useTranslation();
   const { scrollYProgress } = useScroll();
   const springValue = spring || scrollYProgress;
 
@@ -81,7 +83,7 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
               repeatType: "reverse",
             }}
           >
-            Full Stack Web Developer
+            {t('hero.subtitle')}
           </motion.div>
         </motion.div>
         
@@ -91,7 +93,7 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Building modern web applications with a focus on performance, accessibility, and user experience
+          {t('hero.description')}
         </motion.p>
         
         <motion.div 
@@ -105,18 +107,18 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
             size="lg" 
             className="bg-primary/10 backdrop-blur-sm hover:bg-primary/20 transition-all duration-300 hover:scale-105"
             onClick={() => scrollToSection('projects')}
-            aria-label="View my projects"
+            aria-label={t('view_project')}
           >
-            View Projects
+            {t('view_project')}
           </Button>
           <Button 
             variant="outline" 
             size="lg" 
             className="border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105"
             onClick={() => scrollToSection('contact')}
-            aria-label="Contact me"
+            aria-label={t('contact')}
           >
-            Contact Me
+            {t('contact')}
           </Button>
         </motion.div>
       </motion.div>
@@ -131,7 +133,7 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
           transition={{ repeat: Infinity, duration: 2 }}
           className="text-gray-400 flex flex-col items-center gap-2"
         >
-          <span>↓ Scroll to explore</span>
+          <span>↓ {t('scroll_to_explore')}</span>
           <motion.div
             className="w-4 h-4 border-2 border-gray-400 rounded-full"
             animate={{
