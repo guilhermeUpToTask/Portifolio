@@ -188,7 +188,7 @@ const ProjectsSection = () => {
                       <Button 
                         variant="outline" 
                         size="sm" 
-                        className="flex-1"
+                        className="flex-1 truncate"
                         onClick={() => window.open(project.github, '_blank')}
                       >
                         <Github className="w-4 h-4 mr-2" />
@@ -197,7 +197,7 @@ const ProjectsSection = () => {
                       <Button 
                         variant="default" 
                         size="sm" 
-                        className="flex-1"
+                        className="flex-1 truncate"
                         onClick={() => window.open(project.demo, '_blank')}
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
