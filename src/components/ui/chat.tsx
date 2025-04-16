@@ -15,6 +15,7 @@ import { CopyButton } from "@/components/ui/copy-button"
 import { MessageInput } from "@/components/ui/message-input"
 import { MessageList } from "@/components/ui/message-list"
 import { PromptSuggestions } from "@/components/ui/prompt-suggestions"
+import { useTranslation } from "react-i18next"
 
 interface ChatPropsBase {
   handleSubmit: (
@@ -105,11 +106,13 @@ export function Chat({
     [onRateResponse]
   )
 
+  const { t } = useTranslation();
+
   return (
     <ChatContainer className={className}>
       {isEmpty && append && suggestions ? (
         <PromptSuggestions
-          label="Talk to my IA assistant about my competences ✨"
+          label={t('chat.prompt')}
           append={append}
           suggestions={suggestions}
         />

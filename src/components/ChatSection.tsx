@@ -2,11 +2,13 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from './ui/card';
 import { ChatBot } from './ChatBot';
+import { useTranslation } from 'react-i18next';
 
 const ChatSection = () => {
   const controls = useAnimation();
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (isInView) {
@@ -48,8 +50,8 @@ const ChatSection = () => {
         viewport={{ once: true }}
         className="text-center mb-8 top-32 left-1/2 -translate-x-1/2"
       >
-        <h2 className="text-4xl font-bold mb-4">Welcome to My Portfolio - Guilherme Augusto</h2>
-        <p className="text-muted-foreground">A showcase of my work, skills, and passion for technology.</p>
+        <h2 className="text-4xl font-bold mb-4">{t('chat.title')}</h2>
+        <p className="text-muted-foreground">{t('chat.subtitle')}</p>
       </motion.div>
 
       <motion.div

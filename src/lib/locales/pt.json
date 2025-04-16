@@ -74,16 +74,18 @@
     "description": "Apaixonado por criar soluções inovadoras e construir aplicações web incríveis"
   },
   "chat": {
-    "title": "Converse comigo",
-    "placeholder": "Digite sua mensagem aqui...",
-    "placeholder_suggestions": "O que você gostaria de saber sobre mim?",
+    "title": "Bem-vindo ao Meu Portfólio - Guilherme Augusto",
+    "subtitle": "Uma mostra do meu trabalho, habilidades e paixão pela tecnologia.",
     "send": "Enviar",
+    "placeholder_suggestions": "O que você gostaria de saber sobre mim?",
     "suggestions": {
-      "technologies": "Quais tecnologias o desenvolvedor utiliza?",
-      "favorite_tech": "Qual é a tecnologia frontend favorita do desenvolvedor?",
-      "security": "Quais implementações de segurança o desenvolvedor utiliza?",
-      "ai_tools": "O desenvolvedor utiliza alguma ferramenta de IA?"
-    }
+      "technologies": "Quais tecnologias você trabalha?",
+      "favorite_tech": "Qual é sua tecnologia favorita?",
+      "security": "Como você garante a segurança em seus projetos?",
+      "ai_tools": "Quais ferramentas de IA você usa no desenvolvimento?"
+    },
+    "copied": "Resposta copiada para a área de transferência!",
+    "prompt": "Converse com meu assistente de IA sobre minhas competências ✨"
   },
   "timeline": {
     "title": "Linha do Tempo",

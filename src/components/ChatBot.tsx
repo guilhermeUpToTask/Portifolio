@@ -4,7 +4,7 @@ import { type Message } from "@/components/ui/chat-message"
 import { cn } from "@/lib/utils"
 import { Chat } from "@/components/ui/chat"
 import { useTranslation } from 'react-i18next'
- 
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function ChatBot() {
   const { t } = useTranslation();
@@ -17,20 +17,23 @@ export function ChatBot() {
     stop,
     isLoading,
     setMessages,
-} = useChat({
+  } = useChat({
     api: "https://taskmaneger.zapto.org/api/rag/api/chat",
     body: {
-        stream: true,
+      stream: true,
     },
     onError: (error) => {
-        console.error("Chat error:", error);
+      console.error("Chat error:", error);
     },
-});
+  });
 
- 
+  const handleRateResponse = (messageId: string, rating: "thumbs-up" | "thumbs-down") => {
+    // Handle rating if needed
+    console.log(`Rated message ${messageId} with ${rating}`);
+  };
+
   return (
     <div className={cn("flex", "flex-col", "h-[500px]", "w-full", "overflow-y-auto")}>
- 
       <Chat
         className="grow"
         messages={messages as Message[]}
@@ -47,6 +50,7 @@ export function ChatBot() {
           t('chat.suggestions.security'),
           t('chat.suggestions.ai_tools'),
         ]}
+        onRateResponse={handleRateResponse}
       />
     </div>
   )
