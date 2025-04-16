@@ -1,8 +1,30 @@
 {
   "welcome": "Bem-vindo ao meu portfólio",
   "about": "Sobre Mim",
-  "projects": "Projetos",
-  "contact": "Contato",
+  "projects_button": "Ver Projetos",
+  "contact_button": "Contato",
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Sinta-se à vontade para entrar em contato comigo para qualquer dúvida ou oportunidade",
+    "details": {
+      "title": "Detalhes de Contato",
+      "description": "Conecte-se comigo através de vários canais",
+      "email": "E-mail",
+      "whatsapp": "WhatsApp",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "form": {
+      "title": "Enviar Mensagem",
+      "description": "Linha direta para o controle da missão",
+      "name_placeholder": "Digite seu nome",
+      "email_placeholder": "Digite seu e-mail",
+      "message_placeholder": "Digite sua mensagem aqui...",
+      "submit": "Enviar Mensagem",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+    }
+  },
   "skills": {
     "title": "Habilidades Técnicas",
     "subtitle": "Tecnologias com as quais trabalho",
@@ -97,21 +119,29 @@
     "description": "Aqui estão alguns dos meus projetos recentes",
     "tech_stack": "Tecnologias Utilizadas",
     "live_demo": "Demonstração",
-    "source_code": "Código Fonte"
-  },
-  "contact": {
-    "title": "Entre em Contato",
-    "description": "Sinta-se à vontade para entrar em contato comigo para qualquer dúvida ou oportunidade",
-    "form": {
-      "name_placeholder": "Seu nome",
-      "email_placeholder": "Seu e-mail",
-      "message_placeholder": "Sua mensagem",
-      "success": "Mensagem enviada com sucesso!",
-      "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+    "source_code": "Código Fonte",
+    "date": "Data de Lançamento",
+    "status": {
+      "completed": "Concluído",
+      "active": "Ativo",
+      "in_progress": "Em Andamento"
+    },
+    "items": {
+      "taskwise": {
+        "title": "Task Wise Finances",
+        "description": "Desenvolvimento de uma aplicação web para gestão financeira pessoal. A aplicação oferece uma interface limpa e intuitiva com um calendário para facilitar a navegação e compreensão do usuário."
+      },
+      "ml_monitor": {
+        "title": "Monitoramento de Preços Mercado Livre",
+        "description": "O projeto envolve um sistema de monitoramento de preços para o Mercado Livre. Utilizando a biblioteca Scrapy em Python, coleta dados diariamente de uma seleção específica de produtos no Mercado Livre. Esses dados são armazenados em um banco de dados MongoDB e expostos através de uma API construída com FastAPI."
+      },
+      "rag_chatbot": {
+        "title": "Assistente IA – Chatbot RAG",
+        "description": "Desenvolvi um sistema de chatbot utilizando arquitetura Retrieval-Augmented Generation (RAG). Aproveitei um banco de dados vetorizado contendo informações pessoais, integrado via LangChain e embeddings, para recuperar dados relevantes e gerar respostas em linguagem natural usando um modelo de linguagem grande (LLM)."
+      }
     }
   },
   "footer": {
-    "copyright": "© 2024 Todos os direitos reservados",
-    "made_with": "Feito com ❤️ usando React"
+    "copyright": "Todos os direitos reservados"
   }
 } 

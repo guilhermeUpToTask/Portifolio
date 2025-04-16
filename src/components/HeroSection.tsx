@@ -107,18 +107,18 @@ const HeroSection = ({ y1, y2, opacity, spring }: HeroSectionProps) => {
             size="lg" 
             className="bg-primary/10 backdrop-blur-sm hover:bg-primary/20 transition-all duration-300 hover:scale-105"
             onClick={() => scrollToSection('projects')}
-            aria-label={t('view_project')}
+            aria-label={t('projects_button')}
           >
-            {t('view_project')}
+            {t('projects_button')}
           </Button>
           <Button 
             variant="outline" 
             size="lg" 
             className="border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105"
             onClick={() => scrollToSection('contact')}
-            aria-label={t('contact')}
+            aria-label={t('contact_button')}
           >
-            {t('contact')}
+            {t('contact_button')}
           </Button>
         </motion.div>
       </motion.div>

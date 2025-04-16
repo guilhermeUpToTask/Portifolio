@@ -2,12 +2,15 @@ import { motion } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Brain, LineChart, Code, CheckCircle2, Circle, Clock, Github, ExternalLink } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const ProjectsSection = () => {
+  const { t } = useTranslation();
+  
   const projects = [
     {
-      title: "Task Wise Finances",
-      description: "Development of a web application for personal finance management. The application provides a clean and intuitive interface with a calendar to facilitate navigation and user comprehension.",
+      title: t('projects.items.taskwise.title'),
+      description: t('projects.items.taskwise.description'),
       icon: <LineChart className="w-6 h-6" />,
       github: "https://github.com/guilhermeUpToTask/TaskWiseFinancesFront",
       demo: "https://task-wise-finances-front.vercel.app/",
@@ -16,8 +19,8 @@ const ProjectsSection = () => {
       launchDate: "2023-05-15"
     },
     {
-      title: "Mercado Livre Price Monitoring",
-      description: "The project involves a price monitoring system for Mercado Livre. Using the Scrapy library in Python, it collects data daily from a specific selection of products on Mercado Livre. This data is stored in a MongoDB database and exposed through an API built with FastAPI.",
+      title: t('projects.items.ml_monitor.title'),
+      description: t('projects.items.ml_monitor.description'),
       icon: <Code className="w-6 h-6" />,
       github: "https://github.com/guilhermeUpToTask/mercado_livre_scraper_server",
       demo: "#",
@@ -26,8 +29,8 @@ const ProjectsSection = () => {
       launchDate: "2024-03-01"
     },
     {
-      title: "IA Assistant – RAG Chatbot",
-      description: "Developed a chatbot system using Retrieval-Augmented Generation (RAG) architecture. Leveraged a vectorized database containing personal information, integrated via LangChain and embeddings, to retrieve relevant data and generate natural language responses using a large language model (LLM).",
+      title: t('projects.items.rag_chatbot.title'),
+      description: t('projects.items.rag_chatbot.description'),
       icon: <Brain className="w-6 h-6" />,
       github: "#",
       demo: "#chat",
@@ -46,8 +49,8 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 relative z-10"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">Projects</h2>
-          <p className="text-gray-400">Current and upcoming projects</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">{t('projects.title')}</h2>
+          <p className="text-gray-400">{t('projects.description')}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -112,7 +115,7 @@ const ProjectsSection = () => {
                         className="flex items-center gap-1 text-green-500"
                       >
                         <CheckCircle2 className="w-4 h-4" />
-                        <span className="text-sm">Completed</span>
+                        <span className="text-sm">{t('projects.status.completed')}</span>
                       </motion.div>
                     )}
                     {project.status === "active" && (
@@ -123,7 +126,7 @@ const ProjectsSection = () => {
                         className="flex items-center gap-1 text-blue-500"
                       >
                         <Circle className="w-4 h-4 animate-pulse" />
-                        <span className="text-sm">Active</span>
+                        <span className="text-sm">{t('projects.status.active')}</span>
                       </motion.div>
                     )}
                     {project.status === "in-progress" && (
@@ -134,7 +137,7 @@ const ProjectsSection = () => {
                         className="flex items-center gap-1 text-yellow-500"
                       >
                         <Clock className="w-4 h-4" />
-                        <span className="text-sm">In Progress</span>
+                        <span className="text-sm">{t('projects.status.in_progress')}</span>
                       </motion.div>
                     )}
                   </motion.div>
@@ -153,7 +156,7 @@ const ProjectsSection = () => {
                     className="space-y-4"
                   >
                     <div>
-                      <h4 className="text-sm font-medium mb-2">Tech Stack</h4>
+                      <h4 className="text-sm font-medium mb-2">{t('projects.tech_stack')}</h4>
                       <div className="flex flex-wrap gap-2">
                         {project.tech.map((tech, i) => (
                           <motion.span
@@ -169,7 +172,7 @@ const ProjectsSection = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium mb-2">Date</h4>
+                      <h4 className="text-sm font-medium mb-2">{t('projects.date')}</h4>
                       <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -192,7 +195,7 @@ const ProjectsSection = () => {
                         onClick={() => window.open(project.github, '_blank')}
                       >
                         <Github className="w-4 h-4 mr-2" />
-                        View Code
+                        {t('projects.source_code')}
                       </Button>
                       <Button 
                         variant="default" 
@@ -201,7 +204,7 @@ const ProjectsSection = () => {
                         onClick={() => window.open(project.demo, '_blank')}
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        Launch Demo
+                        {t('projects.live_demo')}
                       </Button>
                     </motion.div>
                   </motion.div>

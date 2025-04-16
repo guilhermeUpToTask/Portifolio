@@ -1,8 +1,8 @@
 {
   "welcome": "Welcome to my portfolio",
   "about": "About Me",
-  "projects": "Projects",
-  "contact": "Contact",
+  "projects_button": "View Projects",
+  "contact_button": "Contact",
   "skills": {
     "title": "Technical Skills",
     "subtitle": "Technologies I work with",
@@ -41,7 +41,6 @@
   "english": "English",
   "portuguese": "Portuguese",
   "download_cv": "Download CV",
-  "view_project": "View Project",
   "send_message": "Send Message",
   "name": "Name",
   "email": "Email",
@@ -99,21 +98,51 @@
     "description": "Here are some of my recent projects",
     "tech_stack": "Tech Stack",
     "live_demo": "Live Demo",
-    "source_code": "Source Code"
+    "source_code": "Source Code",
+    "date": "Launch Date",
+    "status": {
+      "completed": "Completed",
+      "active": "Active",
+      "in_progress": "In Progress"
+    },
+    "items": {
+      "taskwise": {
+        "title": "Task Wise Finances",
+        "description": "Development of a web application for personal finance management. The application provides a clean and intuitive interface with a calendar to facilitate navigation and user comprehension."
+      },
+      "ml_monitor": {
+        "title": "Mercado Livre Price Monitoring",
+        "description": "The project involves a price monitoring system for Mercado Livre. Using the Scrapy library in Python, it collects data daily from a specific selection of products on Mercado Livre. This data is stored in a MongoDB database and exposed through an API built with FastAPI."
+      },
+      "rag_chatbot": {
+        "title": "IA Assistant – RAG Chatbot",
+        "description": "Developed a chatbot system using Retrieval-Augmented Generation (RAG) architecture. Leveraged a vectorized database containing personal information, integrated via LangChain and embeddings, to retrieve relevant data and generate natural language responses using a large language model (LLM)."
+      }
+    }
   },
   "contact": {
     "title": "Get in Touch",
     "description": "Feel free to reach out to me for any questions or opportunities",
+    "details": {
+      "title": "Contact Details",
+      "description": "Connect with me through various channels",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
     "form": {
-      "name_placeholder": "Your name",
-      "email_placeholder": "Your email",
-      "message_placeholder": "Your message",
+      "title": "Send Message",
+      "description": "Direct line to mission control",
+      "name_placeholder": "Enter your name",
+      "email_placeholder": "Enter your email",
+      "message_placeholder": "Type your message here...",
+      "submit": "Send Message",
       "success": "Message sent successfully!",
       "error": "Error sending message. Please try again."
     }
   },
   "footer": {
-    "copyright": "© 2024 All rights reserved",
-    "made_with": "Made with ❤️ using React"
+    "copyright": "All rights reserved"
   }
 } 
